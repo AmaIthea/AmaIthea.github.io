@@ -318,14 +318,18 @@ a.contact{
             background-color: rgba(255, 255, 255, 0.7);
         }
 }
-.marg {
-    margin-top: 90px;
+a.marg {
     font-size: 54px;
+    color: black;
+    text-decoration: none;
 }
 .buttonFoot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     font-family: 'Poiret One', cursive;
-    text-align: center;
+    
    
 
 }
