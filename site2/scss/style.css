@@ -294,6 +294,34 @@ a.contact {
   background-color: green;
 }
 
+.slider.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+}
+
+.slider.slick-arrow.slick-prev {
+  left: 0;
+}
+
+.slider.slick-arrow.slick-next {
+  right: 0;
+}
+
+.slider__item {
+  max-width: 500px;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
 .footer {
   background-color: #303030;
   height: 450px;
@@ -362,31 +390,5 @@ a.marg {
 
 .buttonFoot:hover {
   background-color: white;
-}
-
-.hiden {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.foto {
-  width: 320px;
-  height: 320px;
-}
-
-.foto:nth-child(3n+1) {
-  background-color: red;
-}
-
-.foto:nth-child(3n+2) {
-  background-color: black;
-}
-
-.foto:nth-child(3n+3) {
-  background-color: green;
 }
 /*# sourceMappingURL=style.css.map */

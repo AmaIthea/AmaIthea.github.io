@@ -262,14 +262,31 @@ a.contact{
     &__sliderItem:nth-child(3n+2){background-color: black;}
     &__sliderItem:nth-child(3n+3){background-color: green;}
 }
-.sliderBottoms {
-}
-.btnPrev {
-}
-.btnNext {
-}
 
 
+.slider {
+    &.slick-arrow{
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        &.slick-prev{
+            left: 0;
+        }
+        &.slick-next{
+            right: 0;
+        }
+    }
+    
+    &__item {
+        max-width: 500px;
+    }
+}
+.slick-track{
+    display: flex;
+}
+.slick-list{
+    overflow: hidden;
+}
 .footer {
     
     background-color: rgb(48, 48, 48);
@@ -327,28 +344,13 @@ a.marg {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     font-family: 'Poiret One', cursive;
-    
-   
-
 }
 .buttonFoot:hover{
     background-color: rgb(255, 255, 255);
     
 }
-.hiden{
-    display: flex;
-    justify-content: flex-start;
-}
-.foto{
-    width: 320px;
-    height: 320px;
 
-}
-.foto:nth-child(3n+1){background-color: red;}
-.foto:nth-child(3n+2){background-color: black;}
-.foto:nth-child(3n+3){background-color: green;}
 
 
 
