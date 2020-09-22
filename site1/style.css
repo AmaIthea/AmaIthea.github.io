@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family:'Playfair Display', serif;
+    font-size: 14px;
+    color: #6c6c6c;
+    background-color: #fff;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.header{
+
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+.container{
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0;
+    align-items: center;
+    border-bottom: 1px solid #6c6c6c;
+}
+.nav {
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+.header__logo {
+    margin-left: 50px;
+}
+.nav__link {
+    margin-right: 50px;
+    color: #6c6c6c;
+    font-size: 20px;
+    text-decoration: none;
+    opacity: .50;
+    transition: opacity .1s
+    linear;
+
+}
+.nav__link:first-child {
+    margin-left: 0;
+}
+.nav__link:hover {
+    opacity: 1;
+}
+/*font-family: 'Playfair Display', serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Sulphur Point', sans-serif;*/
+
+.air {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 176px;
+    padding-top:50px;
+
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1030px;
+    background: url(img/text_4.jpg) right no-repeat;
+    padding-top:50px;
+}
+
+.foto__1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1039px;
+    background: url(img/text_2.jpg) left no-repeat;
+    padding: 40px;
+}
+.foto__2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1031px;
+    background: url(img/text_3.jpg) right no-repeat;
+    padding: 15px 15px;
+}
+.foto__3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1032px;
+    background: url(img/text_5.jpg) left no-repeat;
+    padding: 40px;
+}
+
+.text__1 {
+    margin-right: 750px;
+    font-size: 16px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+.text__2 {
+    margin-left: 750px;
+    font-size: 16px;
+    padding-right:40px;
+    }
+.text__3{
+    margin-right: 750px;
+    font-size: 16px;
+    padding-left: 40px;
+}
+.text__4 {
+    margin-left: 750px;
+    font-size: 16px;
+    padding-right:40px;
+    }
+
+
