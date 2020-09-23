@@ -129,9 +129,19 @@ a.contact{
     transform: translateZ(0);
     position: absolute;
 }
+.content__text1 .styleText{
+    font-family: 'Rubik Mono One', sans-serif;
+    
+    color: rgb(24, 146, 0);
+}
+.content__text2 .styleText{
+    font-family: 'Rubik Mono One', sans-serif;
+    
+    color: rgb(255, 59, 59);
+}
 .styleText{
     font-family: 'Rubik Mono One', sans-serif;
-    color: rgb(255, 51, 0);
+    color: rgb(118, 141, 82);
 }
 .text2header{
     font-family: 'Rubik Mono One', sans-serif;
@@ -232,8 +242,8 @@ a.contact{
 }
 .gallery {
     color: white;
-    background-color: rgb(122, 122, 122);
-    height: 1050px;
+    background-color: rgb(175, 175, 175);
+    padding-bottom: 40px;
     font-family: 'Poiret One', cursive;
     text-align: center;
     font-size: 68px;
@@ -245,12 +255,35 @@ a.contact{
 }
 
 .slider img{
-    max-width: 500px;
+    max-width: 560px;
 }
 .slider .slick-arrow{
+    color: white;
+    font-size: 0px;
+    font-family: 'Poiret One', cursive;
+    background-color: transparent;
+    border-style: none;
     position: absolute;
     top: 50%;
     z-index: 10;
+}
+.slick-prev::before{
+    font-size: 70px;
+    content: "< ";
+}
+.slick-next::after{
+    font-size: 70px;
+    content: " >";
+}
+.slick-prev{
+    background-color: none;
+    
+    left: 0;
+}
+.slick-next{
+    background-color: none;
+    
+    right: 0;
 }
 .slider .slick-dots{
     display: flex;
@@ -277,12 +310,7 @@ a.contact{
     border-radius: 50%;
     border-style: none;
 }
-.slick-prev{
-    left: 0;
-}
-.slick-next{
-    right: 0;
-}
+
 .slider {
    
     margin-top: 40px;
