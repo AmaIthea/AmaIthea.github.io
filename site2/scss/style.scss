@@ -233,7 +233,7 @@ a.contact{
 .gallery {
     color: white;
     background-color: rgb(122, 122, 122);
-    height: 750px;
+    height: 1050px;
     font-family: 'Poiret One', cursive;
     text-align: center;
     font-size: 68px;
@@ -243,42 +243,52 @@ a.contact{
             
 		}
 }
-.sliderConteiner {
-    overflow: hidden;
-    background-color: pink;
 
-    &__sliderTrak {
-        display: flex;
-        background-color: rgb(43, 235, 91);
-        transition: .2s;
-    }
-
-    &__sliderItem {
-        min-width: 200px;
-        height: 100px;
-        
-    }
-    &__sliderItem:nth-child(3n+1){background-color: red;}
-    &__sliderItem:nth-child(3n+2){background-color: black;}
-    &__sliderItem:nth-child(3n+3){background-color: green;}
+.slider img{
+    max-width: 500px;
+}
+.slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+.slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .slick-dots li{
+    list-style: none;
+    margin: 0px 10px;
 }
 
+.slider .slick-dots li.slick-active button{
+    background-color: transparent;
+    border: solid 1px #fff;
+}
 
+.slider .slick-dots button{
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 0px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    border-style: none;
+}
+.slick-prev{
+    left: 0;
+}
+.slick-next{
+    right: 0;
+}
 .slider {
-    &.slick-arrow{
-        position: absolute;
-        top: 50%;
-        z-index: 10;
-        &.slick-prev{
-            left: 0;
-        }
-        &.slick-next{
-            right: 0;
-        }
-    }
-    
+   
+    margin-top: 40px;
+   position: relative;
     &__item {
-        max-width: 500px;
+        min-width: 0;
     }
 }
 .slick-track{

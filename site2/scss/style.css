@@ -252,7 +252,7 @@ a.contact {
 .gallery {
   color: white;
   background-color: #7a7a7a;
-  height: 750px;
+  height: 1050px;
   font-family: 'Poiret One', cursive;
   text-align: center;
   font-size: 68px;
@@ -263,53 +263,65 @@ a.contact {
   color: white;
 }
 
-.sliderConteiner {
-  overflow: hidden;
-  background-color: pink;
+.slider img {
+  max-width: 500px;
 }
 
-.sliderConteiner__sliderTrak {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #2beb5b;
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-
-.sliderConteiner__sliderItem {
-  min-width: 200px;
-  height: 100px;
-}
-
-.sliderConteiner__sliderItem:nth-child(3n+1) {
-  background-color: red;
-}
-
-.sliderConteiner__sliderItem:nth-child(3n+2) {
-  background-color: black;
-}
-
-.sliderConteiner__sliderItem:nth-child(3n+3) {
-  background-color: green;
-}
-
-.slider.slick-arrow {
+.slider .slick-arrow {
   position: absolute;
   top: 50%;
   z-index: 10;
 }
 
-.slider.slick-arrow.slick-prev {
+.slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+.slider .slick-dots li.slick-active button {
+  background-color: transparent;
+  border: solid 1px #fff;
+}
+
+.slider .slick-dots button {
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  border-style: none;
+}
+
+.slick-prev {
   left: 0;
 }
 
-.slider.slick-arrow.slick-next {
+.slick-next {
   right: 0;
 }
 
+.slider {
+  margin-top: 40px;
+  position: relative;
+}
+
 .slider__item {
-  max-width: 500px;
+  min-width: 0;
 }
 
 .slick-track {
