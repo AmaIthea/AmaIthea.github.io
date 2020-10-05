@@ -62,7 +62,9 @@ $screen-1200-max: 1199px;
     min-width: 235px;
 
       @media (max-width: $screen-760-max) {
-        display: none;
+        width: 100%;
+        top: 0%;
+        min-height: 80px;
         
     }
 }
@@ -90,9 +92,8 @@ $screen-1200-max: 1199px;
 		&__menu {
             margin-top: 40px;
             @media (max-width: $screen-760-max) {
-                display: flex;
-                position: relative;
-                margin-top: 0;
+                display: none;
+                
             }
 		}
 
@@ -101,17 +102,15 @@ $screen-1200-max: 1199px;
             font-size: 16px;
             padding: 20px;
             text-align: center;
-            @media (max-width: $screen-760-max) {
-                padding: 0px 10px;
-                margin: 0px 20px;
-                font-size: 20px;
-            }
         }
         @media (max-width: $screen-760-max) {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            position: relative;
+            position: fixed;
             width: 100%;
+            top: 0%;
+            min-height: 80px;
         }
 }
 .rightSideBlock{
@@ -152,148 +151,4 @@ $screen-1200-max: 1199px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-// body{
-//     margin: 0;
-//     background-color: rgb(150, 150, 150);
-// }
-// a{
-//     text-decoration: none;
-//     color: #000;
-// }
-
-// header{
-    
-//     text-align: center;
-//     font-family: 'Prosto One', cursive;
-//     font-size: 24px;
-//     margin-top: 20px;
-//     padding: 20px;
-//     background-color: white;
-//     border-radius: 10px;
-// }
-// .counteiner {
-//     max-width: 970px;
-//     margin: auto;
-//     font-family: 'Prosto One', cursive;
-// }
-
-// .content {
-//     font-family: 'Prosto One', cursive;
-//     margin-top: 20px;
-//     padding: 20px;
-//     background-color: white;
-//     border-radius: 10px;
-//     &__header {
-//         font-size: 34px;
-//         text-align: center;
-
-//     }
-
-//     &__body {
-//         margin-top: 20px;
-//         padding: 20px;
-//         border-radius: 10px;
-//         background-color: rgb(150, 150, 150);
-//     }
-// }
-// .item {
-//     text-align: right;
-//     margin-top: 10px;
-//     padding: 10px;
-//     border-radius: 10px;
-//     background-color: rgb(201, 201, 201);
-
-//     &__head {
-//         font-size: 24px;
-//         text-align: center;
-//         padding: 10px;
-//     }
-
-//     &__body {
-//         text-align: start;
-//         margin-top: 10px;
-//         padding: 10px;
-//         border-radius: 10px;
-//         background-color: rgb(201, 201, 201);
-
-//     }
-//     &__footer{
-//         display: flex;
-//         justify-content: space-between;
-//         padding: 20px;
-//         border-radius: 10px;
-//         background-color: rgba(255, 255, 255, 0);
-
-//     }
-//     &__button1{ 
-//         margin-top: 40px;
-//         border: solid 3px rgb(201, 201, 201);
-//         padding: 5px;
-//         border-radius: 10px;
-//         background-color: rgb(255, 255, 255);
-
-//     }&__button2{ 
-//         margin-top: 40px;
-//         border: solid 3px rgb(201, 201, 201);
-//         padding: 5px;
-//         border-radius: 10px;
-//         background-color: rgb(255, 255, 255);
-
-//     }
-//     &__button1:hover{ 
-//         background-color: rgb(255, 122, 122);
-//     }
-//     &__button2:hover{ 
-//         background-color: rgb(149, 255, 122);
-//     }
-    
-// }
-// // .item:hover{
-// //     background-color: rgb(255, 255, 255);
-// // }
-
-// .footer {
-//     font-family: 'Prosto One', cursive;
-//     margin-top: 20px;
-//     margin-bottom: 20px;
-//     padding: 20px;
-//     background-color: white;
-//     border-radius: 10px;
-
-//     &__head{
-//         font-size: 24px;
-//         text-align: center;
-//     }
-//     &__body{
-//         margin-top: 20px;
-//         display: flex;
-//         justify-content: space-between;
-
-//     }
-//     &__bottom{
-//         text-align: center;
-//         height: 100px;
-//         width: 100px;
-//         background-color: rgb(150, 150, 150);
-//         border-radius: 50px;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-        
-//     }
-//     &__bottom:hover{
-//         background-color: rgb(149, 255, 122);
-//     }
-    
-// }
-
+ 

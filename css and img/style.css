@@ -47,7 +47,9 @@
 
 @media (max-width: 759px) {
   .leftSideBlock {
-    display: none;
+    width: 100%;
+    top: 0%;
+    min-height: 80px;
   }
 }
 
@@ -81,11 +83,7 @@
 
 @media (max-width: 759px) {
   .leftSide__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    margin-top: 0;
+    display: none;
   }
 }
 
@@ -97,23 +95,20 @@
 }
 
 @media (max-width: 759px) {
-  .leftSide__button {
-    padding: 0px 10px;
-    margin: 0px 20px;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 759px) {
   .leftSide {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative;
+    position: fixed;
     width: 100%;
+    top: 0%;
+    min-height: 80px;
   }
 }
 

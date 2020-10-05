@@ -252,8 +252,9 @@ a.contact {
 }
 
 .gallery {
+  margin-top: 700px;
   color: white;
-  background-color: #afafaf;
+  background-color: black;
   padding-bottom: 40px;
   font-family: 'Poiret One', cursive;
   text-align: center;
