@@ -97,10 +97,32 @@ $screen-1200-max: 1199px;
             padding: 20px;
             overflow: hidden;
             .img1{
-                background: black url(img/top.jpg) center top no-repeat;
+                width: 230px;
+                height: 390px;
+                background: black url(img/site1.jpg) center top no-repeat;
                 shape-margin: 3px;
                 shape-outside: polygon(0% 0%, 0% 100%, 70% 100%, 98% 0%);
                 clip-path: polygon(0% 0%, 0% 100%, 70% 100%, 98% 0%);
+                background-size: cover;
+                float: left;
+            }
+            .img2{
+                width: 230px;
+                height: 390px;
+                background: black url(img/site2.jpg) center top no-repeat;
+                shape-margin: 3px;
+                shape-outside: polygon(60% 0%,7% 54%, 10% 90%,30% 100%, 100% 100%, 100% 0%);
+                clip-path: polygon(60% 0%,7% 54%, 10% 90%,30% 100%, 100% 100%, 100% 0%);
+                background-size: cover;
+                float: right;
+            }
+            .img3{
+                width: 230px;
+                height: 390px;
+                background: black url(img/site3.jpg) center top no-repeat;
+                shape-margin: 3px;
+                shape-outside: polygon(0% 0%, 0% 100%, 71% 71%,96% 71%, 97% 24%);
+                clip-path: polygon(0% 0%, 0% 100%, 71% 71%,96% 71%, 97% 24%);
                 background-size: cover;
                 float: left;
             }
@@ -109,8 +131,7 @@ $screen-1200-max: 1199px;
 		&__img {
             position: relative;
             z-index: 1;
-            width: 230px;
-            height: 390px;
+            
             border: solid 5px rgb(255, 255, 255);
 		}
 
