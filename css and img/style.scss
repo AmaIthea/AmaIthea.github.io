@@ -11,7 +11,6 @@ $screen-1200-max: 1199px;
 
 
 .counteiner {
-    
     display: flex;
     justify-content: space-between;
     @media (max-width: $screen-760-max) {
@@ -35,6 +34,7 @@ $screen-1200-max: 1199px;
     }
 
     &__header {
+        padding: 40px 0px 40px 0px;
         font-size: 46px;
         font-family: 'Comfortaa', cursive;
         text-align: center;
@@ -116,16 +116,6 @@ $screen-1200-max: 1199px;
                 background-size: cover;
                 float: right;
             }
-            .img3{
-                width: 230px;
-                height: 390px;
-                background: black url(img/site3.jpg) center top no-repeat;
-                shape-margin: 3px;
-                shape-outside: polygon(0% 0%, 0% 100%, 71% 71%,96% 71%, 97% 24%);
-                clip-path: polygon(0% 0%, 0% 100%, 71% 71%,96% 71%, 97% 24%);
-                background-size: cover;
-                float: left;
-            }
         }
 
 		&__img {
@@ -136,6 +126,7 @@ $screen-1200-max: 1199px;
 		}
 
 		&__header {
+            padding: 20px;
             text-align: center;
             font-size: 34px;
             font-family: 'Comfortaa', cursive;
@@ -144,6 +135,8 @@ $screen-1200-max: 1199px;
 
 		&__text {
             font-family: 'Comfortaa', cursive;
+            font-size: 22px;
+            line-height: 1.5;
 		}
 
 		&__menu {
@@ -286,6 +279,9 @@ $screen-1200-max: 1199px;
             
         }
 }
+.scroll{
+    background-color: yellow;
+}
 
 
 
@@ -293,4 +289,96 @@ $screen-1200-max: 1199px;
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#myList li {
+    padding-left: 7px;
+    margin-bottom: 15px;
+    transition: all .2s ease-in-out;
+    transform: translate3d(0px, 30px, 0);
+    opacity: 0;
+}
+#myList li.active {
+    transform: translate3d(0px, 0, 0);
+    opacity: 1;
+}
+
+
+body {
+    background-color: #ffffff;
+    transition: all 1s ease-in;
+    padding: 50px;
+    color: #111;
+    font-family: sans-serif;
+    line-height: 32px;
+    font-size: 18px;
+  }
+  .colorOne {
+    background-color: #000000;
+    color: rgb(139, 139, 139);
+    padding: 40px;
+  }
+  .colorTwo {
+    background-color: #FFF;
+    color: #000;
+  }
+
+  #mainContent {
+    width: 420px;
+    margin: 0 auto;
+  }
+
+  #mainContent p {
+    padding: 20px;
+  }
+
+  #mainContent #firstBox {
+    font-weight: bold;
+    transform: translate3d(-30px, 0, 0);
+    transition: all .5s ease-out;
+    opacity: 0;
+  }
+
+  #mainContent #firstBox.active {
+    background-color: #333;
+    color: #FFF;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  #mainContent #secondBox {
+    transition: all .2s ease-in-out;
+    transform: translate3d(0, 30px, 0);
+    opacity: 0;
+  }
+
+  #mainContent #secondBox.active {
+    background-color: #1581AF;
+    color: #FFF;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  #mainContent ol li {
+    padding-left: 7px;
+    margin-bottom: 15px;
+    transition: all .2s ease-in-out;
+    transform: translate3d(20px, 0, 0);
+    opacity: 0;
+  }
+
+  #mainContent ol li.active {
+    transform: translate3d(0px, 0, 0);
+    opacity: 1;
+  }
