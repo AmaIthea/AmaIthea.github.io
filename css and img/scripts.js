@@ -1,6 +1,6 @@
 
 
-var isScrolling = false;
+let isScrolling = false;
  
 window.addEventListener("scroll", throttleScroll, false);
 
@@ -18,55 +18,90 @@ function throttleScroll(e) {
 
 document.addEventListener("DOMContentLoaded", scrolling, false);
  
-    var listItems = document.querySelectorAll("#mainContent ol li");
-    var firstBox = document.querySelector("#firstBox");
-    var secondBox = document.querySelector("#secondBox");
- 
+    let contentAboutMe = document.querySelector("#contentAboutMe");
+    let contentProjects = document.querySelector("#contentProjects");
+    let contentDesign = document.querySelector("#contentDesign");
+
+    let leftSide = document.querySelector("#leftSide");
+    let rightSide = document.querySelector("#rightSide");
+
+    let post1 = document.querySelector("#post1");
+    let post2 = document.querySelector("#post2");
+    let post3 = document.querySelector("#post3");
+
+
     function scrolling(e) {
  
-      if (isPartiallyVisible(firstBox)) {
-        firstBox.classList.add("active");
- 
-        document.body.classList.add("colorOne");
-        document.body.classList.remove("colorTwo");
-      } else {
-        document.body.classList.remove("colorOne");
-        document.body.classList.remove("colorTwo");
+      if (isPartiallyVisible(contentAboutMe)) {
+        document.body.classList.remove("black");
+        document.body.classList.remove("blue");
+        document.body.classList.add("white");
+        post1.classList.remove("postBlack");
+        post2.classList.remove("postBlack");
+        post3.classList.remove("postBlack");
+        post1.classList.remove("postBlue");
+        post2.classList.remove("postBlue");
+        post3.classList.remove("postBlue");
+        leftSide.classList.remove("black");
+        rightSide.classList.remove("black");
+        leftSide.classList.remove("blue");
+        rightSide.classList.remove("blue");
+      } 
+      else {
+        leftSide.classList.add("black");
+        rightSide.classList.add("black");
+        post1.classList.add("postBlack");
+        post2.classList.add("postBlack");
+        post3.classList.add("postBlack");
+        post1.classList.remove("postBlue");
+        post2.classList.remove("postBlue");
+        post3.classList.remove("postBlue");
+        leftSide.classList.remove("blue");
+        rightSide.classList.remove("blue");
+        document.body.classList.remove("white");
+        document.body.classList.add("black");
       }
- 
-      if (isFullyVisible(secondBox)) {
-        secondBox.classList.add("active");
- 
-        document.body.classList.add("colorTwo");
-        document.body.classList.remove("colorOne");
+      if (isFullyVisible(contentDesign)) {
+        document.body.classList.remove("black");
+        document.body.classList.remove("white");
+        document.body.classList.add("blue");
+        leftSide.classList.remove("black");
+        rightSide.classList.remove("black");
+        leftSide.classList.add("blue");
+        rightSide.classList.add("blue");
+        post1.classList.remove("postBlack");
+        post2.classList.remove("postBlack");
+        post3.classList.remove("postBlack");
+        post1.classList.add("postBlue");
+        post2.classList.add("postBlue");
+        post3.classList.add("postBlue");
       }
- 
-      for (var i = 0; i < listItems.length; i++) {
-        var listItem = listItems[i];
- 
-        if (isPartiallyVisible(listItem)) {
-          listItem.classList.add("active");
-        } else {
-          listItem.classList.remove("active");
-        }
+      else {
+        post1.classList.add("postBlack");
+        post2.classList.add("postBlack");
+        document.body.classList.remove("white");
+        document.body.classList.remove("blue");
       }
     }
- 
+
+
+
+
     function isPartiallyVisible(el) {
-      var elementBoundary = el.getBoundingClientRect();
+      let elementBoundary = el.getBoundingClientRect();
  
-      var top = elementBoundary.top;
-      var bottom = elementBoundary.bottom;
-      var height = elementBoundary.height;
+      let top = elementBoundary.top;
+      let bottom = elementBoundary.bottom;
+      let height = elementBoundary.height;
  
       return ((top + height >= 0) && (height + window.innerHeight >= bottom));
     }
  
     function isFullyVisible(el) {
-      var elementBoundary = el.getBoundingClientRect();
+      let elementBoundary = el.getBoundingClientRect();
  
-      var top = elementBoundary.top;
-      var bottom = elementBoundary.bottom;
+      let top = elementBoundary.top;
+      let bottom = elementBoundary.bottom;
  
       return ((top >= 0) && (bottom <= window.innerHeight));
     }
