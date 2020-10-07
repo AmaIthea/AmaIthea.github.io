@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", scrolling, false);
         document.body.classList.remove("white");
         document.body.classList.add("black");
       }
-      if (isFullyVisible(contentDesign)) {
+      if (isPartiallyVisible(contentDesign)) {
         document.body.classList.remove("black");
         document.body.classList.remove("white");
         document.body.classList.add("blue");
