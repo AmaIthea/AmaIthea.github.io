@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", scrolling, false);
       if (isPartiallyVisible(contentDesign)) {
         document.body.classList.remove("black");
         document.body.classList.remove("white");
-        document.body.classList.add("blue");
         leftSide.classList.remove("black");
         rightSide.classList.remove("black");
+        document.body.classList.add("blue");
         leftSide.classList.add("blue");
         rightSide.classList.add("blue");
         post1.classList.remove("postBlack");
