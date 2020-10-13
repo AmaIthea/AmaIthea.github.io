@@ -191,7 +191,6 @@
   left: 0;
   min-height: 100%;
   min-width: 235px;
-  background-color: white;
 }
 
 .leftSide__header {
@@ -286,7 +285,6 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: white;
 }
 
 @media (max-width: 989px) {
@@ -296,7 +294,6 @@
 }
 
 body {
-  background-color: #ffffff;
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
   padding: 50px;

@@ -180,7 +180,7 @@ $screen-1200-max: 1199px;
     left: 0;
     min-height: 100%;
     min-width: 235px;
-    background-color: rgb(255, 255, 255);
+    
 
 		&__header {
             padding: 10px 0px;
@@ -255,7 +255,6 @@ $screen-1200-max: 1199px;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgb(255, 255, 255);
 
 		&__menu {
             
@@ -282,7 +281,6 @@ $screen-1200-max: 1199px;
 
 
 body {
-    background-color: #ffffff;
     transition: all 1s ease-in;
     padding: 50px;
     color: #111;

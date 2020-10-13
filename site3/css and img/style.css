@@ -1,0 +1,131 @@
+.bgImage1 {
+  background: url(img/image4\.svg) top no-repeat;
+  height: 100vh;
+}
+
+.counteiner {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+section {
+  height: 100vh;
+}
+
+section hr {
+  opacity: 0.4;
+  border: 1px solid #FFFFFF;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 12px;
+}
+
+.header__navigations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__nav {
+  padding: 18px;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-right: 16px;
+  color: white;
+}
+
+.mine__tittle {
+  margin-top: 66px;
+  font-family: Cuprum;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 92px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.mine__text {
+  margin-top: 18px;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 32px;
+  color: white;
+}
+
+.mine__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 22px 25px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8rem;
+  width: 20rem;
+  font-family: Roboto;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: white;
+}
+
+.mine__graph {
+  bottom: 0px;
+  right: 0px;
+  position: absolute;
+  background: #FFFFFF;
+  opacity: 0.1;
+  border: 1px solid #FFFFFF;
+  min-width: 70%;
+  min-height: 90%;
+  -webkit-clip-path: polygon(70% 43%, 85% 38%, 100% 0, 100% 100%, 0 100%, 0 90%, 29% 70%, 50% 67%);
+          clip-path: polygon(70% 43%, 85% 38%, 100% 0, 100% 100%, 0 100%, 0 90%, 29% 70%, 50% 67%);
+}
+
+.mine__footerButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mine__footerButton {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #0f1e52 100%;
+}
+/*# sourceMappingURL=style.css.map */

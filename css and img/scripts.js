@@ -22,9 +22,6 @@ document.addEventListener("DOMContentLoaded", scrolling, false);
     let contentProjects = document.querySelector("#contentProjects");
     let contentDesign = document.querySelector("#contentDesign");
 
-    let leftSide = document.querySelector("#leftSide");
-    let rightSide = document.querySelector("#rightSide");
-
     let post1 = document.querySelector("#post1");
     let post2 = document.querySelector("#post2");
     let post3 = document.querySelector("#post3");
@@ -42,33 +39,21 @@ document.addEventListener("DOMContentLoaded", scrolling, false);
         post1.classList.remove("postBlue");
         post2.classList.remove("postBlue");
         post3.classList.remove("postBlue");
-        leftSide.classList.remove("black");
-        rightSide.classList.remove("black");
-        leftSide.classList.remove("blue");
-        rightSide.classList.remove("blue");
       } 
       else {
-        leftSide.classList.add("black");
-        rightSide.classList.add("black");
         post1.classList.add("postBlack");
         post2.classList.add("postBlack");
         post3.classList.add("postBlack");
         post1.classList.remove("postBlue");
         post2.classList.remove("postBlue");
         post3.classList.remove("postBlue");
-        leftSide.classList.remove("blue");
-        rightSide.classList.remove("blue");
         document.body.classList.remove("white");
         document.body.classList.add("black");
       }
       if (isPartiallyVisible(contentDesign)) {
         document.body.classList.remove("black");
         document.body.classList.remove("white");
-        leftSide.classList.remove("black");
-        rightSide.classList.remove("black");
-        document.body.classList.add("blue");
-        leftSide.classList.add("blue");
-        rightSide.classList.add("blue");
+        document.body.classList.add("blue");  
         post1.classList.remove("postBlack");
         post2.classList.remove("postBlack");
         post3.classList.remove("postBlack");
