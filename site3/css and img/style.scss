@@ -9,6 +9,7 @@
     
 }
 section {
+    
     height: 100vh;
     hr{
         opacity: 0.4;
@@ -46,8 +47,65 @@ section {
 		&__menu {
 		}
 }
-.mine {
+.slider {
+    
+    &__item {
+        color: white;
+    }
 
+    &__text {
+        padding-left: 70%;
+    padding-top: 6%;
+    }
+
+    &__sum {
+    }
+    
+    .slick-track{
+        display: flex;
+    }
+    .slick-list{
+        overflow: hidden;
+    }
+   .slick-dots{
+    
+   }
+   .slick-dots li{
+       list-style: none;
+   }
+   .slick-dots button{ 
+    
+    border-style: none;
+    font-size: 0px;
+    width: 10px;
+    height: 12px;
+    
+    border-radius: 50%;
+   }
+   #slick-slide-control00{
+    position: absolute;
+    top: 72.5%;
+    left: 50%;
+   }
+   #slick-slide-control01{
+    position: absolute;
+    top: 69.5%;
+    left: 64.8%;
+    }
+    #slick-slide-control02{
+    position: absolute;
+    top: 48%;
+    left: 78.5%;
+    }
+    #slick-slide-control03{
+    position: absolute;
+    top: 43%;
+    left: 89%;
+    }
+    
+}
+
+.mine {
     &__tittle {
         margin-top: 66px;
 
@@ -108,33 +166,47 @@ section {
     &__slider {
     }
     &__graph {
-        bottom: 0px;
+        top: 10%;
         right: 0px;
         position: absolute;
         background: #FFFFFF;
         opacity: 0.1;
         border: 1px solid #FFFFFF;
-        min-width: 70%;
-        min-height: 90%;
+        width: 132vh;
+        height: 90vh;
         clip-path: polygon(70% 43%, 85% 38%, 100% 0, 100% 100%, 0 100%, 0 90%, 29% 70%, 50% 67%);
     }
     &__footerButtons {
         display: flex;
         justify-content: space-between;
+        position: relative;
+        
     }
 
     &__footerButton {
+        margin-top: 15%;
+        background: #FFFFFF;
+        opacity: 0.8;
+        padding: 25px 20px;
+        min-width: 340px;
+
+        &:hover{
+            border-top: solid 4px red;
+            margin-top: 14.5%;
+            opacity: 1;
+        }
+        
 
 
-
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 18px;
-        letter-spacing: 0.04em;
-        text-align: left;
-        color: #0f1e52 100%;
+            text-transform: uppercase;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0.04em;
+            text-align: left;
+            color: #0f1e52 100%;
 
 
     }

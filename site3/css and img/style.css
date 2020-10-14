@@ -48,6 +48,61 @@ section hr {
   color: white;
 }
 
+.slider__item {
+  color: white;
+}
+
+.slider__text {
+  padding-left: 70%;
+  padding-top: 6%;
+}
+
+.slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider .slick-list {
+  overflow: hidden;
+}
+
+.slider .slick-dots li {
+  list-style: none;
+}
+
+.slider .slick-dots button {
+  border-style: none;
+  font-size: 0px;
+  width: 10px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.slider #slick-slide-control00 {
+  position: absolute;
+  top: 72.5%;
+  left: 50%;
+}
+
+.slider #slick-slide-control01 {
+  position: absolute;
+  top: 69.5%;
+  left: 64.8%;
+}
+
+.slider #slick-slide-control02 {
+  position: absolute;
+  top: 48%;
+  left: 78.5%;
+}
+
+.slider #slick-slide-control03 {
+  position: absolute;
+  top: 43%;
+  left: 89%;
+}
+
 .mine__tittle {
   margin-top: 66px;
   font-family: Cuprum;
@@ -97,14 +152,14 @@ section hr {
 }
 
 .mine__graph {
-  bottom: 0px;
+  top: 10%;
   right: 0px;
   position: absolute;
   background: #FFFFFF;
   opacity: 0.1;
   border: 1px solid #FFFFFF;
-  min-width: 70%;
-  min-height: 90%;
+  width: 132vh;
+  height: 90vh;
   -webkit-clip-path: polygon(70% 43%, 85% 38%, 100% 0, 100% 100%, 0 100%, 0 90%, 29% 70%, 50% 67%);
           clip-path: polygon(70% 43%, 85% 38%, 100% 0, 100% 100%, 0 100%, 0 90%, 29% 70%, 50% 67%);
 }
@@ -116,9 +171,16 @@ section hr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 .mine__footerButton {
+  margin-top: 15%;
+  background: #FFFFFF;
+  opacity: 0.8;
+  padding: 25px 20px;
+  min-width: 340px;
+  text-transform: uppercase;
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -127,5 +189,11 @@ section hr {
   letter-spacing: 0.04em;
   text-align: left;
   color: #0f1e52 100%;
+}
+
+.mine__footerButton:hover {
+  border-top: solid 4px red;
+  margin-top: 14.5%;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
