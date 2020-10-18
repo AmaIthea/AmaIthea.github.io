@@ -120,29 +120,30 @@ section {
         right: 0px;
     }
     .owl-carousel {
-        margin-top: -4vh;
-        margin-left: 115vh;
+        position: static;
+        margin-top: -40px;
+        margin-left: 950px;
         .owl-dots{
             :nth-child(1){
                 position: absolute;
-                top: 13vh;
-                left: -51vh;
+                bottom: 210px;
+                right: 747px;
             }
             :nth-child(2){
                 position: absolute;
-                top: 13vh;
-                left: -26vh;
+                bottom: 213px;
+                right: 521px;
                 
             }
             :nth-child(3) {
                 position: absolute;
-                top: -6.5vh;
-                left: -2vh;
+                bottom: 389px;
+                right: 303px;
             }
             :nth-child(4){
                 position: absolute;
-                top: -10.5vh;
-                left: 14vh;
+                bottom: 426px;
+                right: 159px;
             }
             
         }
@@ -309,48 +310,38 @@ section {
 
 
 
-// // &__graph {
-// //     top: 10%;
-// //     right: 0px;
-// //     position: absolute;
-// //     background: #FFFFFF;
-// //     opacity: 0.1;
-// //     border: 1px solid #FFFFFF;
-// //     width: 132vh;
-// //     height: 90vh;
-// //     clip-path: polygon(70% 43%, 85% 38%, 100% 0, 100% 100%, 0 100%, 0 90%, 29% 70%, 50% 67%);
-// // }
-// &__footerButtons {
-//     display: flex;
-//     justify-content: space-between;
-//     position: relative;
-    
-// }
-
-// &__footerButton {
-//     margin-top: 15%;
-//     background: #FFFFFF;
-//     opacity: 0.8;
-//     padding: 25px 20px;
-//     min-width: 340px;
-
-//     &:hover{
-//         border-top: solid 4px red;
-//         margin-top: 14.5%;
-//         opacity: 1;
-//     }
+.footer{
+ 
+    display: flex;
+    justify-content: space-between;
+    position: relative;
     
 
 
-//         text-transform: uppercase;
-//         font-family: Roboto;
-//         font-size: 14px;
-//         font-style: normal;
-//         font-weight: 400;
-//         line-height: 18px;
-//         letter-spacing: 0.04em;
-//         text-align: left;
-//         color: #0f1e52 100%;
+&__button {
+    margin-top: 62px;
+    background: #FFFFFF;
+    opacity: 0.8;
+    padding: 25px 20px;
+    min-width: 340px;
+
+    &:hover{
+        border-top: solid 4px red;
+        opacity: 1;
+    }
+    
 
 
-// }
+        text-transform: uppercase;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: #0f1e52 100%;
+
+
+}
+}

@@ -3,7 +3,11 @@ $(document).ready(function(){
 owl.owlCarousel({
     items:1,
     dots: true,
-     
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    animateIn: 'animate__fadeIn',
+    animateOut: 'animate__fadeOut'
 });
 });
 
