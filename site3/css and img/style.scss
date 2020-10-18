@@ -52,7 +52,7 @@ section {
 		&__menu {
             cursor: pointer;
             padding: 6px;
-            min-width: 30px;
+            min-width: 40px;
             min-height: 16px;
             hr{
                 border: 1px solid #ffffff;
@@ -88,15 +88,22 @@ section {
     &__button {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: #ffffff;
     border: 1.5px solid rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     box-sizing: border-box;
-    padding: 22px 25px;
+    padding: 22px 25px 22px 25px;
     cursor: pointer;
     font-size: 14px;
     margin-top: 8rem;
     width: 20rem;
+    transition: .5s;
+        &:hover{
+            padding: 22px 16px 22px 25px;
+            transition: .5s;
+            background: #8A93B4;
+        }
     
 
 
@@ -147,11 +154,29 @@ section {
             }
             
         }
+        @keyframes radial-pulse {
+            0% {
+              box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
+            }
+          
+            100% {
+              box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);
+            }
+          }
         .owl-dot{
             background-color: white;
             width: 10px;
             height: 10px;
             border-radius: 50%;
+            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+            &.active{
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: red;
+                border: solid 1px white;
+                animation: radial-pulse 2s infinite;
+            }
         }
         
     }
@@ -283,10 +308,10 @@ section {
 
   
 
-  @media screen and (max-height: 450px) {
-    .rhtSide {padding-top: 15px;}
-    .rhtSide a {font-size: 18px;}
-  }
+//   @media screen and (max-height: 450px) {
+//     .rhtSide {padding-top: 15px;}
+//     .rhtSide a {font-size: 18px;}
+//   }
 
 
 
@@ -311,23 +336,31 @@ section {
 
 
 .footer{
- 
+    position: absolute;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    bottom: 0;
     
 
 
-&__button {
-    margin-top: 62px;
+&__button{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0px 20px;
     background: #FFFFFF;
     opacity: 0.8;
-    padding: 25px 20px;
-    min-width: 340px;
-
+    padding: 26px 20px 30px 30px;
+    min-width: 360px;
+    transition: .5s;
+    border-top: 4px solid transparent;
+    
     &:hover{
+        padding: 26px 12px 30px 30px;
+        transition: .5s;
+        
         border-top: solid 4px red;
-        opacity: 1;
     }
     
 
@@ -344,4 +377,5 @@ section {
 
 
 }
+
 }
