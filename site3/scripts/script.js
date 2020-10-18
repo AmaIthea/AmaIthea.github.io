@@ -9,6 +9,11 @@ owl.owlCarousel({
     animateIn: 'animate__fadeIn',
     animateOut: 'animate__fadeOut'
 });
+$('.sidetwo__slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
 });
 
 let openButton = document.getElementById("menu");

@@ -232,6 +232,53 @@ section hr {
   text-align: left;
 }
 
+.footer {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  bottom: 0;
+}
+
+.footer__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 20px;
+  background: #FFFFFF;
+  opacity: 0.8;
+  padding: 26px 20px 30px 30px;
+  min-width: 360px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-top: 4px solid transparent;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #0f1e52 100%;
+}
+
+.footer__button:hover {
+  padding: 26px 12px 30px 30px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-top: solid 4px red;
+}
+
 .rhtSide {
   height: 100%;
   width: 0;
@@ -343,7 +390,7 @@ section hr {
 }
 
 .sidetwo__leftside {
-  max-width: 45%;
+  max-width: 40%;
 }
 
 .sidetwo__rightside {
@@ -359,6 +406,10 @@ section hr {
   line-height: 64px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.sidetwo__line {
+  margin: 36px 0px;
 }
 
 .sidetwo__text {
@@ -390,7 +441,7 @@ section hr {
   padding: 22px 25px 22px 25px;
   cursor: pointer;
   font-size: 14px;
-  margin-top: 8rem;
+  margin-top: 4rem;
   width: 20rem;
   -webkit-transition: .5s;
   transition: .5s;
@@ -412,7 +463,31 @@ section hr {
   background: #8A93B4;
 }
 
+.sidetwo__slider {
+  overflow: hidden;
+}
+
+.sidetwo__slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidetwo__slider .slick-arrow {
+  position: absolute;
+  top: 470px;
+  right: 140px;
+  font-size: 0px;
+}
+
+.sidetwo__slider .slick-arrow .slick-prev {
+  min-width: 100px;
+  min-height: 100px;
+  background: url(img/prev\.pvg) 100% 100% no-repeat;
+}
+
 .sidetwo__footer {
+  margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,52 +518,5 @@ section hr {
   line-height: 51px;
   letter-spacing: 0em;
   text-align: left;
-}
-
-.footer {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  bottom: 0;
-}
-
-.footer__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0px 20px;
-  background: #FFFFFF;
-  opacity: 0.8;
-  padding: 26px 20px 30px 30px;
-  min-width: 360px;
-  -webkit-transition: .5s;
-  transition: .5s;
-  border-top: 4px solid transparent;
-  text-transform: uppercase;
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0.04em;
-  text-align: left;
-  color: #0f1e52 100%;
-}
-
-.footer__button:hover {
-  padding: 26px 12px 30px 30px;
-  -webkit-transition: .5s;
-  transition: .5s;
-  border-top: solid 4px red;
 }
 /*# sourceMappingURL=style.css.map */

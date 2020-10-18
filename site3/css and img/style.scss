@@ -214,6 +214,52 @@ section {
 }
 
 
+.footer{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    
+
+
+&__button{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0px 20px;
+    background: #FFFFFF;
+    opacity: 0.8;
+    padding: 26px 20px 30px 30px;
+    min-width: 360px;
+    transition: .5s;
+    border-top: 4px solid transparent;
+    
+    &:hover{
+        padding: 26px 12px 30px 30px;
+        transition: .5s;
+        
+        border-top: solid 4px red;
+    }
+    
+
+
+        text-transform: uppercase;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: #0f1e52 100%;
+
+
+}
+
+}
+
+
 .rhtSide {
     
     height: 100%; 
@@ -318,7 +364,7 @@ section {
     }
 
     &__leftside {
-        max-width: 45%;
+        max-width: 40%;
     }
     &__rightside {
         max-width: 45%;
@@ -335,7 +381,9 @@ section {
     letter-spacing: 0em;
     text-align: left;
     }
-
+    &__line{
+        margin: 36px 0px;
+    }
     &__text {
 
         color: rgb(187, 187, 187);
@@ -360,7 +408,7 @@ section {
     padding: 22px 25px 22px 25px;
     cursor: pointer;
     font-size: 14px;
-    margin-top: 8rem;
+    margin-top: 4rem;
     width: 20rem;
     transition: .5s;
         &:hover{
@@ -382,9 +430,42 @@ section {
         color: white;
     }
 
-   
+		&__slider {
+            
+            overflow: hidden;
+            
+            .slick-track{
+                display: flex;  
+            }
+            .slick-dots{
+
+            }
+            .slick-arrow{
+                position: absolute;
+                top: 470px;
+                right: 140px;
+                font-size: 0px;
+                
+                .slick-prev{
+                    min-width: 100px;
+                    min-height: 100px;
+                    background: url(css and img/prev\.pvg) 100% 100% no-repeat;
+                }
+                .slick-next{
+
+                }
+            }
+		}
+
+		&__slide {
+            
+            
+		}
+
+
 
     &__footer {
+        margin-top: 60px;
         display: flex;
         justify-content: flex-start;
     }
@@ -426,69 +507,3 @@ section {
 //     .rhtSide a {font-size: 18px;}
 //   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    bottom: 0;
-    
-
-
-&__button{
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin:0px 20px;
-    background: #FFFFFF;
-    opacity: 0.8;
-    padding: 26px 20px 30px 30px;
-    min-width: 360px;
-    transition: .5s;
-    border-top: 4px solid transparent;
-    
-    &:hover{
-        padding: 26px 12px 30px 30px;
-        transition: .5s;
-        
-        border-top: solid 4px red;
-    }
-    
-
-
-        text-transform: uppercase;
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 18px;
-        letter-spacing: 0.04em;
-        text-align: left;
-        color: #0f1e52 100%;
-
-
-}
-
-}
