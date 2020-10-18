@@ -9,6 +9,13 @@ body * {
   height: 100vh;
 }
 
+.bgImage2 {
+  position: relative;
+  background: url(img/image7\.svg) 100% 100% no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
 .counteiner {
   max-width: 1220px;
   margin: 0 auto;
@@ -323,6 +330,119 @@ section hr {
 .rhtSide__itemsStyle {
   white-space: pre;
   color: white;
+}
+
+.sidetwo__mine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 98px;
+}
+
+.sidetwo__leftside {
+  max-width: 45%;
+}
+
+.sidetwo__rightside {
+  max-width: 45%;
+}
+
+.sidetwo__header {
+  color: white;
+  font-family: Cuprum;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.sidetwo__text {
+  color: #bbbbbb;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.sidetwo__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 22px 25px 22px 25px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8rem;
+  width: 20rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-family: Roboto;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: white;
+}
+
+.sidetwo__button:hover {
+  padding: 22px 16px 22px 25px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background: #8A93B4;
+}
+
+.sidetwo__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.sidetwo__item {
+  margin-right: 76px;
+  color: #bbbbbb;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.sidetwo__itemStyle {
+  display: block;
+  color: white;
+  font-family: Cuprum;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .footer {

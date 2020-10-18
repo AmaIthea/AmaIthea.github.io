@@ -2,11 +2,17 @@ body * {
     box-sizing: border-box;
 }
 
-
 .bgImage1 {
     background: url(css and img/image4\.svg) 100% 100% no-repeat;
     background-size: cover;
     height: 100vh;
+}
+.bgImage2 {
+    position: relative;
+    background: url(css and img/image7\.svg) 100% 100% no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
 }
 
 .counteiner {
@@ -122,6 +128,7 @@ section {
 
 .slider{
     &__graph{
+        
         position: absolute;
         bottom: -10px;
         right: 0px;
@@ -181,6 +188,7 @@ section {
         
     }
     &__items {
+
         color: white;
         font-family: Roboto;
         font-size: 14px;
@@ -301,6 +309,111 @@ section {
         
   }
   
+  .sidetwo {
+
+    &__mine {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 98px;
+    }
+
+    &__leftside {
+        max-width: 45%;
+    }
+    &__rightside {
+        max-width: 45%;
+    }
+
+    &__header {
+
+    color: white;   
+    font-family: Cuprum;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    }
+
+    &__text {
+
+        color: rgb(187, 187, 187);
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        
+    }
+
+    &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    box-sizing: border-box;
+    padding: 22px 25px 22px 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 8rem;
+    width: 20rem;
+    transition: .5s;
+        &:hover{
+            padding: 22px 16px 22px 25px;
+            transition: .5s;
+            background: #8A93B4;
+        }
+    
+
+
+        font-family: Roboto;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: white;
+    }
+
+   
+
+    &__footer {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__item {
+        margin-right: 76px;
+        color: rgb(187, 187, 187);
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        text-align: left;
+
+        &Style{
+            display: block;
+            color: white;
+            font-family: Cuprum;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 51px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+    }
+}
 
   
  
