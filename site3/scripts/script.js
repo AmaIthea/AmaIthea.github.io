@@ -1,20 +1,20 @@
 $(document).ready(function(){
-    $('.slider').slick({
-        arrows: false,
-        dots: true,
-        speed: 0,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 5000
-    });
+  let owl = $('.owl-carousel');
+owl.owlCarousel({
+    items:1,
+    dots: true,
+     
 });
+});
+
 let openButton = document.getElementById("menu");
 let closeButton = document.getElementById("close");
+let rhtSide = document.getElementById("rhtSide");
 openButton.onclick = function(){
-    document.getElementById("rhtSide").style.width = "400px";
+    rhtSide.style.width = "400px";
   }
 closeButton.onclick = function() {
-  document.getElementById("rhtSide").style.width = "0";
+  rhtSide.style.width = "0";
 }
 
 
