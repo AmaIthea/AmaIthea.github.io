@@ -40,6 +40,18 @@ section hr {
   padding-top: 12px;
 }
 
+.header__logo {
+  z-index: 1;
+}
+
+.header__logo a {
+  position: absolute;
+  width: 191.99px;
+  height: 44px;
+  z-index: 4;
+  cursor: pointer;
+}
+
 .header__navigations {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,10 +71,32 @@ section hr {
   text-align: center;
   margin-right: 16px;
   color: white;
+}
+
+.header__nav a {
+  z-index: 10;
   cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.header__nav a:after {
+  display: block;
+  position: absolute;
+  bottom: -28px;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  content: "";
+}
+
+.header__nav a:hover:after {
+  width: 100%;
 }
 
 .header__menu {
+  z-index: 10;
   cursor: pointer;
   padding: 6px;
   min-width: 40px;
@@ -74,7 +108,7 @@ section hr {
 }
 
 .mine__tittle {
-  margin-top: 120px;
+  margin-top: 12vh;
   font-family: Cuprum;
   font-size: 72px;
   font-style: normal;
@@ -86,7 +120,7 @@ section hr {
 }
 
 .mine__text {
-  margin-top: 54px;
+  margin-top: 2vh;
   font-family: Roboto;
   font-size: 20px;
   line-height: 32px;
@@ -94,6 +128,7 @@ section hr {
 }
 
 .mine__button {
+  margin-top: 12vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,7 +146,6 @@ section hr {
   padding: 22px 25px 22px 25px;
   cursor: pointer;
   font-size: 14px;
-  margin-top: 8rem;
   width: 20rem;
   -webkit-transition: .5s;
   transition: .5s;
@@ -141,8 +175,40 @@ section hr {
 
 .slider .owl-carousel {
   position: static;
-  margin-top: -40px;
-  margin-left: 950px;
+  margin-top: 160px;
+  margin-left: 970px;
+}
+
+@media screen and (max-height: 999px) {
+  .slider .owl-carousel {
+    position: static;
+    margin-top: 100px;
+    margin-left: 970px;
+  }
+}
+
+@media screen and (max-height: 899px) {
+  .slider .owl-carousel {
+    position: static;
+    margin-top: 10px;
+    margin-left: 970px;
+  }
+}
+
+@media screen and (max-height: 699px) {
+  .slider .owl-carousel {
+    position: static;
+    margin-top: -60px;
+    margin-left: 970px;
+  }
+}
+
+@media screen and (max-height: 599px) {
+  .slider .owl-carousel {
+    position: static;
+    margin-top: -120px;
+    margin-left: 970px;
+  }
 }
 
 .slider .owl-carousel .owl-dots :nth-child(1) {
@@ -283,7 +349,7 @@ section hr {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 12;
   top: 0;
   right: 0;
   color: #8A93B4;
@@ -296,6 +362,30 @@ section hr {
 .rhtSide__counteiner {
   max-width: 340px;
   margin: 0 auto;
+}
+
+.rhtSide a {
+  position: relative;
+  text-decoration: none;
+  color: #8A93B4;
+}
+
+.rhtSide a:hover {
+  color: white;
+}
+
+.rhtSide a:after {
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  content: "";
+}
+
+.rhtSide a:hover:after {
+  width: 100%;
 }
 
 .rhtSide hr {
@@ -473,17 +563,63 @@ section hr {
   display: flex;
 }
 
+.sidetwo__slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.sidetwo__slider .slick-dots button {
+  width: 17.5px;
+  height: 2.5px;
+  font-size: 0px;
+  border: none;
+  margin-right: 9px;
+  background-color: #C4C4C4;
+  opacity: 20%;
+}
+
+.sidetwo__slider .slick-dots li {
+  margin: 0px 0px;
+  list-style: none;
+}
+
+.sidetwo__slider .slick-dots li.slick-active button {
+  background-color: white;
+  opacity: 1;
+}
+
 .sidetwo__slider .slick-arrow {
   position: absolute;
   top: 470px;
-  right: 140px;
+  right: 110px;
   font-size: 0px;
 }
 
-.sidetwo__slider .slick-arrow .slick-prev {
-  min-width: 100px;
-  min-height: 100px;
-  background: url(img/prev\.pvg) 100% 100% no-repeat;
+.sidetwo__slider .slick-arrow.slick-prev {
+  min-width: 56px;
+  min-height: 56px;
+  background: url(img/prev\.png) center no-repeat;
+  border: solid 1px #8A93B4;
+  right: 186px;
+}
+
+.sidetwo__slider .slick-arrow.slick-prev:hover {
+  background-color: rgba(183, 216, 255, 0.13);
+  border: solid 1px rgba(183, 216, 255, 0.13);
+}
+
+.sidetwo__slider .slick-arrow.slick-next {
+  min-width: 56px;
+  min-height: 56px;
+  background: url(img/next\.png) center no-repeat;
+  border: solid 1px #8A93B4;
+}
+
+.sidetwo__slider .slick-arrow.slick-next:hover {
+  background-color: rgba(183, 216, 255, 0.13);
+  border: solid 1px rgba(183, 216, 255, 0.13);
 }
 
 .sidetwo__footer {
