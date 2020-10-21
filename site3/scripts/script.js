@@ -14,6 +14,8 @@ $('.sidetwo__slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   dots: true,
+  autoplay: true,
+  autoplayTimeout: 4000,
 });
 });
 
@@ -25,6 +27,15 @@ openButton.onclick = function(){
   }
 closeButton.onclick = function() {
   rhtSide.style.width = "0";
+}
+let openButton2 = document.getElementById("openButton");
+let closeButton2 = document.getElementById("close2");
+let leftSide = document.getElementById("leftSide");
+openButton2.onclick = function(){
+  leftSide.style.width = "800px";
+}
+closeButton2.onclick = function() {
+leftSide.style.width = "0";
 }
 
 
