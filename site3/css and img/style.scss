@@ -6,34 +6,86 @@ body * {
     background: url(css and img/image4\.svg) 100% 100% no-repeat;
     background-size: cover;
     height: 100vh;
+    min-height: 680px;
+    @media screen and (max-height: 679px) {
+        background-size: cover;
+        background: url(css and img/image4\.svg) center no-repeat;
+    }
+    @media screen and (max-width: 399px){
+        background: url(css and img/image13\.svg) 100% 100% no-repeat;
+        background-size: cover;
+    }
 }
 .bgImage2 {
     position: relative;
     background: url(css and img/image7\.svg) 100% 100% no-repeat;
     background-size: cover;
-    height: 100vh;
-    
+    min-height: 680px;
+    @media screen and (max-width: 399px){
+        background: url(css and img/image12\.svg) 100% 100% no-repeat;
+        background-size: cover;
+    }
+    .mobileCounteiner{
+        @media screen and (max-width: 599px) {
+            max-width: none;
+            margin: none;
+        }
+        
+    }
 }
 
 .counteiner {
     max-width: 1220px;
     margin: 0 auto;
-    
+}
+.mobileCounteiner {
+    max-width: 1220px;
+    margin: 0 auto;
+    @media screen and (max-width: 1199px) {
+        max-width: 1000px;
+        margin: 0 auto;
+     }
+    @media screen and (max-width: 999px) {
+       max-width: 800px;
+       margin: 0 auto;
+    }
+    @media screen and (max-width: 799px) {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 599px) {
+        max-width: 400px;
+        
+    }
+    @media screen and (max-width: 399px) {
+        max-width: 329px;
+        margin: 0 auto;
+    }
 }
 section {
     overflow: hidden;
     
-    height: 100vh;
+    
     hr{
         border: 1px solid #ffffff4b;
     }
-    
+    min-height: 680px;
+}
+.hr{
+    @media screen and (max-width: 1199px) {
+       display: none;
+    }
 }
 .header {
     display: flex;
     justify-content: space-between;
     padding-top: 12px;
-
+    @media screen and (max-width: 1199px) {
+        background-color: rgba(0, 56, 121, 1);
+        height: 72px;
+        padding: 12px 30px;
+    }
+    
 		&__logo {
             z-index: 1;
             a{  
@@ -60,7 +112,9 @@ section {
             text-align: center;
             margin-right: 16px;
             color: rgb(255, 255, 255);
-            
+            @media screen and (max-width: 1199px) {
+                display: none;
+            }
             a{  
                 z-index: 10;
                 cursor: pointer;
@@ -120,30 +174,7 @@ section {
         max-width: 340px;
         margin: 0 auto;
     }
-    a{
-        position: relative;
-        text-decoration: none;
-        color: #8A93B4;
-        &:hover{
-            color: white;
-        }
-    }
-    a:after {
-        display: block;
-        position: absolute;
-        bottom: -10px;
-        width: 0%;
-        height: 2px; 
-        background-color: red; 
-        content: ""; 
-    }
-    a:hover:after {
     
-	width: 100%; 
-    }
-    a:active{
-        color: red;
-    }
     hr{
         margin: 16px 0px;
     }
@@ -197,10 +228,39 @@ section {
         line-height: 24px;
         letter-spacing: 0em;
         text-align: left;
+
+        a{
+            position: relative;
+            text-decoration: none;
+            color: #8A93B4;
+            &:hover{
+                color: white;
+            }
+        }
+        a:after {
+            display: block;
+            position: absolute;
+            bottom: -10px;
+            width: 0%;
+            height: 2px; 
+            background-color: red; 
+            content: ""; 
+        }
+        a:hover:after {
+        
+        width: 100%; 
+        }
+        a:active{
+            color: red;
+        }
     }
     &__footer{
         padding-top: 14vh;
         
+        a{
+            cursor: pointer;
+            text-decoration: none;
+        }
     }
     &__items{
         white-space:pre;
@@ -233,7 +293,12 @@ section {
             letter-spacing: 0em;
             text-align: left;
             color: white;
-
+            @media screen and (max-width: 599px) {
+                margin-top: 34vh;
+                font-family: Cuprum;
+                font-size: 56px;
+                line-height: 60px;
+            }
     }
 
     &__text {
@@ -243,7 +308,19 @@ section {
             font-size: 20px;
             line-height: 32px;
             color: white;
+            @media screen and (max-width: 599px) {
+                color: rgba(255, 255, 255, 0.8);
 
+            }
+            @media screen and (max-width: 599px) {
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
     }
     &__button {
     margin-top: 12vh;
@@ -292,6 +369,12 @@ section {
         bottom: -10px;
         right: 0px;
     }
+    @media screen and (max-height: 499px) {
+        display: none;
+    }
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
     .owl-carousel {
         position: static;
         margin-top: 160px;
@@ -316,6 +399,7 @@ section {
             margin-top: -120px;
             margin-left: 970px;
         }
+        
         .owl-dots{
             :nth-child(1){
                 position: absolute;
@@ -398,8 +482,12 @@ section {
     display: flex;
     justify-content: space-between;
     bottom: 0;
-    
-
+    @media screen and (max-height: 499px) {
+        display: none;
+    }   
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 
 &__button{
     
@@ -540,13 +628,38 @@ section {
         display: flex;
         justify-content: space-between;
         margin-top: 12vh;
+        @media screen and (max-width: 799px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__leftside {
         max-width: 40%;
+        @media screen and (max-width: 799px) {
+        min-width: 600px;
+        }
+        @media screen and (max-width: 599px) {
+        margin:  auto;
+        min-width: 400px;   
+        }
+        @media screen and (max-width: 399px) {
+            min-width: 329px;
+            margin: 0 auto;
+         }
     }
     &__rightside {
         max-width: 45%;
+        @media screen and (max-width: 799px) {
+        min-width: 600px;    
+        }
+        @media screen and (max-width: 599px) {
+        margin:  auto;
+        min-width: 400px;   
+        }
+        @media screen and (max-width: 399px) {
+            min-width: 329px;
+            margin: 0 auto;
+         }
     }
 
     &__header {
@@ -559,6 +672,15 @@ section {
     line-height: 64px;
     letter-spacing: 0em;
     text-align: left;
+    @media screen and (max-width: 399px) {
+        font-family: Cuprum;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;        
+    }
     }
     &__line{
         margin: 3vh 0px;
@@ -573,7 +695,18 @@ section {
         line-height: 24px;
         letter-spacing: 0em;
         text-align: left;
-        
+        @media screen and (max-width: 799px) {
+        margin-bottom: 48px;
+        }
+        @media screen and (max-width: 399px) {
+            ffont-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;                 
+        }
     }
 
     &__button {
@@ -607,9 +740,26 @@ section {
         letter-spacing: 0.04em;
         text-align: left;
         color: white;
+        @media screen and (max-width: 799px) {
+            display: none;   
+        }
     }
 
 		&__slider {
+            @media screen and (max-width: 599px) {
+                    height: 320px;
+                    width: 400px;
+                    img{
+                        width: 400px;
+                    }
+                }
+                @media screen and (max-width: 399px) {
+                    height: 320px;
+                    width: 400px;
+                    img{
+                        width: 328px;
+                    }
+                }
             position: relative;
             overflow: hidden;
             .slick-track{
@@ -627,7 +777,10 @@ section {
                     margin-right: 9px;
                     background-color: #C4C4C4;
                     opacity: 20%;
-                    
+                    @media screen and (max-width: 599px) {
+                        width: 16px;
+                        height: 4px;
+                    }
                 }
                 li{
                     margin: 0px 0px;
@@ -646,6 +799,12 @@ section {
                 top: 376px;
                 right: 0px;
                 font-size: 0px;
+                @media screen and (max-width: 599px){
+                    top: 260px;
+                }
+                @media screen and (max-width: 399px) {
+                    top: 220px;
+                }
                 
                 
                 &.slick-prev{
@@ -658,6 +817,9 @@ section {
                         background-color: rgba(183, 216, 255, 0.13);
                         border: solid 1px rgba(183, 216, 255, 0.13);
                     }
+                    @media screen and (max-width: 399px) {
+                        right: 144px;
+                    }
                 }
                 &.slick-next{
                     min-width: 56px;
@@ -668,21 +830,31 @@ section {
                         background-color: rgba(183, 216, 255, 0.13);
                         border: solid 1px rgba(183, 216, 255, 0.13);
                     }
+                    @media screen and (max-width: 399px) {
+                        right: 72px;
+                    }
                 }
             }
 		}
 
-		&__slide {
-            
-            
-		}
+		
 
 
 
     &__footer {
-        margin-top: 4vh;
+        margin: 4vh 0;
         display: flex;
         justify-content: flex-start;
+        @media screen and (max-width: 799px) {
+            flex-wrap: wrap;
+            min-width: 160px;
+            justify-content: space-between;
+            margin: 4vh 0;
+        }
+        @media screen and (max-width: 399px) {
+            min-width: none;
+            margin: 4vh 10px;
+        }
     }
 
     &__item {
@@ -695,7 +867,20 @@ section {
         line-height: 20px;
         letter-spacing: 0.03em;
         text-align: left;
-
+        @media screen and (max-width: 399px) {
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.03em;
+            text-align: left;    
+        }
+        &Spec{
+            @media screen and (max-width: 799px) {
+                order: 1;
+            }
+        }
         &Style{
             display: block;
             color: white;
@@ -706,7 +891,64 @@ section {
             line-height: 51px;
             letter-spacing: 0em;
             text-align: left;
+            @media screen and (max-width: 399px) {
+                font-family: Cuprum;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 51px;
+                letter-spacing: 0em;
+                text-align: left;   
+            }
 
+        }
+        @media screen and (max-width: 799px) {
+            min-width: 160px;
+            margin: 24px 20px;
+        }
+        @media screen and (max-width: 399px) {
+            margin: 8px 8px;
+        }
+    }
+
+    .mobileButton{
+        display: none;
+        @media screen and (max-width: 799px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ffffff;
+        border: 1.5px solid rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        box-sizing: border-box;
+        padding: 22px 25px 22px 25px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 8vh;
+        margin-bottom: 56px;
+        width: 16rem;
+        transition: .5s;
+            &:hover{
+                padding: 22px 16px 22px 25px;
+                transition: .5s;
+                background: #8A93B4;
+            }
+            font-family: Roboto;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 14px;
+            letter-spacing: 0.04em;
+            text-align: left;
+            color: white;
+        }
+        @media screen and (max-width: 599px) {
+            margin: auto; 
+            margin-bottom: 56px;
+        }
+        @media screen and (max-width: 399px) {
+            width: 328px;
         }
     }
 }
@@ -716,9 +958,4 @@ section {
   
 
   
-
-//   @media screen and (max-height: 450px) {
-//     .rhtSide {padding-top: 15px;}
-//     .rhtSide a {font-size: 18px;}
-//   }
 

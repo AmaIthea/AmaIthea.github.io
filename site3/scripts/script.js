@@ -29,10 +29,15 @@ closeButton.onclick = function() {
   rhtSide.style.width = "0";
 }
 let openButton2 = document.getElementById("openButton");
+let openButton3 = document.getElementById("openButton-mobile")
 let closeButton2 = document.getElementById("close2");
 let leftSide = document.getElementById("leftSide");
+
 openButton2.onclick = function(){
   leftSide.style.width = "800px";
+}
+openButton3.onclick = function(){
+  leftSide.style.width = "100%";
 }
 closeButton2.onclick = function() {
 leftSide.style.width = "0";
