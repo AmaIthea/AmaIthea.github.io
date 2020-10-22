@@ -4,6 +4,7 @@ body * {
 }
 
 .bgImage1 {
+  overflow: hidden;
   background: url(img/image4\.svg) 100% 100% no-repeat;
   background-size: cover;
   height: 100vh;
@@ -25,10 +26,18 @@ body * {
 }
 
 .bgImage2 {
+  overflow: hidden;
   position: relative;
   background: url(img/image7\.svg) 100% 100% no-repeat;
   background-size: cover;
+  height: 100vh;
   min-height: 680px;
+}
+
+@media screen and (max-width: 999px) {
+  .bgImage2 {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 399px) {
@@ -90,7 +99,6 @@ body * {
 }
 
 section {
-  overflow: hidden;
   min-height: 680px;
 }
 
@@ -451,38 +459,42 @@ section hr {
 .slider .owl-carousel {
   position: static;
   margin-top: 160px;
-  margin-left: 970px;
+  margin-left: 1100px;
 }
 
 @media screen and (max-height: 999px) {
   .slider .owl-carousel {
-    position: static;
     margin-top: 100px;
-    margin-left: 970px;
   }
 }
 
 @media screen and (max-height: 899px) {
   .slider .owl-carousel {
-    position: static;
     margin-top: 10px;
-    margin-left: 970px;
   }
 }
 
 @media screen and (max-height: 699px) {
   .slider .owl-carousel {
-    position: static;
     margin-top: -60px;
-    margin-left: 970px;
   }
 }
 
 @media screen and (max-height: 599px) {
   .slider .owl-carousel {
-    position: static;
     margin-top: -120px;
-    margin-left: 970px;
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  .slider .owl-carousel {
+    margin-left: 920px;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .slider .owl-carousel {
+    margin-left: 1000px;
   }
 }
 
@@ -657,6 +669,20 @@ section hr {
   margin: 0px 0px 0px 72px;
 }
 
+@media screen and (max-width: 599px) {
+  .leftSide__counteiner {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .leftSide__counteiner {
+    max-width: 329px;
+    margin: auto;
+  }
+}
+
 .leftSide__tittle {
   color: #0F1D4E;
   font-family: Cuprum;
@@ -667,6 +693,12 @@ section hr {
   letter-spacing: 0em;
   text-align: left;
   margin-top: 20vh;
+}
+
+@media screen and (max-width: 399px) {
+  .leftSide__tittle {
+    font-size: 36px;
+  }
 }
 
 .leftSide__text {
@@ -734,6 +766,10 @@ section hr {
 
 .leftSide__button:hover {
   background-color: #003879;
+}
+
+.leftSide__button.active {
+  color: red;
 }
 
 .sidetwo__mine {

@@ -22,8 +22,12 @@ $('.sidetwo__slider').slick({
 let openButton = document.getElementById("menu");
 let closeButton = document.getElementById("close");
 let rhtSide = document.getElementById("rhtSide");
+
 openButton.onclick = function(){
-    rhtSide.style.width = "400px";
+  if(document.documentElement.clientWidth > 500){
+    rhtSide.style.width = "400px";} 
+    else{rhtSide.style.width = "100%";}
+    
   }
 closeButton.onclick = function() {
   rhtSide.style.width = "0";

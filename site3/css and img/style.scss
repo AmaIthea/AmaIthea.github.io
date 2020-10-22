@@ -3,6 +3,7 @@ body * {
 }
 
 .bgImage1 {
+    overflow: hidden;
     background: url(css and img/image4\.svg) 100% 100% no-repeat;
     background-size: cover;
     height: 100vh;
@@ -17,10 +18,15 @@ body * {
     }
 }
 .bgImage2 {
+    overflow: hidden;
     position: relative;
     background: url(css and img/image7\.svg) 100% 100% no-repeat;
     background-size: cover;
+    height: 100vh;
     min-height: 680px;
+    @media screen and (max-width: 999px) {
+        height: 100%;
+     }
     @media screen and (max-width: 399px){
         background: url(css and img/image12\.svg) 100% 100% no-repeat;
         background-size: cover;
@@ -35,6 +41,7 @@ body * {
 }
 
 .counteiner {
+    
     max-width: 1220px;
     margin: 0 auto;
 }
@@ -63,7 +70,7 @@ body * {
     }
 }
 section {
-    overflow: hidden;
+    
     
     
     hr{
@@ -284,7 +291,6 @@ section {
 .mine {
     &__tittle {
         margin-top: 12vh;
-
             font-family: Cuprum;
             font-size: 72px;
             font-style: normal;
@@ -378,26 +384,24 @@ section {
     .owl-carousel {
         position: static;
         margin-top: 160px;
-        margin-left: 970px;
+        margin-left: 1100px;
         @media screen and (max-height: 999px) {
-            position: static;
             margin-top: 100px;
-            margin-left: 970px;
         }
         @media screen and (max-height: 899px) {
-            position: static;
             margin-top: 10px;
-            margin-left: 970px;
         }
         @media screen and (max-height: 699px) {
-            position: static;
             margin-top: -60px;
-            margin-left: 970px;
         }
         @media screen and (max-height: 599px) {
-            position: static;
             margin-top: -120px;
-            margin-left: 970px;
+        }
+        @media screen and (max-width: 1499px) {
+            margin-left: 920px;
+        }
+        @media screen and (max-width: 1599px) {
+            margin-left: 1000px;
         }
         
         .owl-dots{
@@ -548,6 +552,14 @@ section {
     &__counteiner{
         max-width: 520px;
         margin: 0px 0px 0px 72px;
+        @media screen and (max-width: 599px) {
+            max-width: 400px;
+            margin: auto;
+        }
+        @media screen and (max-width: 399px) {
+            max-width: 329px;
+            margin: auto;
+        }
     }
     &__tittle{
         color: #0F1D4E;
@@ -559,6 +571,9 @@ section {
         letter-spacing: 0em;
         text-align: left;
         margin-top: 20vh;
+        @media screen and (max-width: 399px) {
+            font-size: 36px;
+        }
     }
     &__text{
         color: #484848;
@@ -618,6 +633,9 @@ section {
         &:hover{
             background-color: #003879;
 
+        }
+        &.active{
+            color: red;
         }
     }  
   }
