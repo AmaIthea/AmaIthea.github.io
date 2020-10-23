@@ -1,4 +1,5 @@
 body {
+  cursor: crosshair;
   margin: 0;
 }
 
@@ -20,18 +21,24 @@ body {
 }
 
 .mine__counteiner {
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 700px;
-  height: 400px;
+  min-width: 700px;
+  min-height: 400px;
   border: solid 4px #2a352a;
 }
 
+.mine__left {
+  margin-right: 10px;
+}
+
 .mine__coins {
+  margin: 20px;
   min-width: 400px;
 }
 
@@ -51,8 +58,24 @@ body {
   max-height: 100px;
 }
 
+.mine__input {
+  display: block;
+  font-family: 'Staatliches', cursive;
+  font-size: 24px;
+  margin: 20px;
+  color: #2a352a;
+}
+
 .mine .mineInput {
-  z-index: 20;
+  letter-spacing: 2px;
+  font-family: 'Staatliches', cursive;
+  color: #2a352a;
+  font-size: 20px;
+  display: block;
+  outline: none;
+  padding: 5px;
+  background-color: transparent;
+  border: solid 2px #2a352a;
 }
 
 .mine__buttons {
@@ -66,25 +89,12 @@ body {
 }
 
 .mine__button {
+  cursor: pointer;
   text-align: center;
   font-family: 'Staatliches', cursive;
   padding: 6px 10px;
   margin: 10px;
   color: #2a352a;
   border: solid 2px #2a352a;
-}
-
-.inner {
-  z-index: 1;
-  left: 0;
-  top: 0;
-  position: fixed;
-  min-width: 100vw;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-  -webkit-box-shadow: inset 0px 0px 900px 100px #1d1d1d;
-          box-shadow: inset 0px 0px 900px 100px #1d1d1d;
-  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

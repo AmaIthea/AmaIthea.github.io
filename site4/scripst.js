@@ -1,7 +1,9 @@
 
 let cancel = document.getElementById('cancel');
 let giveOut = document.getElementById('giveOut');
-
+cancel.onclick = function(){
+    location.reload()
+}
 giveOut.onclick = function(){
     let input = document.getElementById('input').value;
     let coin5000 = 0;
@@ -10,7 +12,7 @@ giveOut.onclick = function(){
     let coin100 = 0;
     let coin50 = 0;
     if(input % 50 !== 0 || input <= 0)
-    { alert("Введите другое число")}
+    { alert("other amount")}
     else 
     { 
         while(input >= 5000)
@@ -38,8 +40,9 @@ giveOut.onclick = function(){
         document.getElementById('coins500').innerHTML = coin500;
         document.getElementById('coins100').innerHTML = coin100;
         document.getElementById('coins50').innerHTML = coin50;
-        alert("расчет произведен")
+        alert("calculation is ready")
         refresh = function(){
+            alert("renewal")
             location.reload()
         }
 
