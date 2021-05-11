@@ -1,13 +1,14 @@
-import Header from './../../components/Header/Header';
-import Container from '@material-ui/core/Container';
+import React from 'react'
+import Link from '@material-ui/core/Link';
 
-const Home = () => {
+const Main = () => {
+    const preventDefault = (event) => event.preventDefault();
     return (
-        <Container maxWidth="sm">
-            <Header />
-        </Container>
+        <div className='Main'>
+            <h1>Добро пожаловать!</h1>
+            <p>Мы рады приветствовать вас на обучающем портале English lessons.<br />
+               Здесь Вы имеете возможность <Link href="/lessons" onClick={preventDefault}>выучить новые слова</Link>, <Link>практиковать уже пройденное</Link> а также <Link>просматривать статистику  своей успеваемости</Link>.</p>
+        </div>
     )
-
 }
-
-export default Home;
+export default Main;
