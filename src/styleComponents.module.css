@@ -1,0 +1,21 @@
+
+.block {
+    position: relative;
+    margin: 16px 0 0;
+    padding: 16px;
+}
+.close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: red;
+}
+.h2 {
+    margin: 0;
+}
+.p {
+    margin: 0;
+}

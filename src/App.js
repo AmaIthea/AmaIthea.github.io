@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route } from 'react-router'
 import { BrowserRouter} from 'react-router-dom'
 import {Container} from '@material-ui/core'
@@ -13,16 +13,16 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#4c8c4a',
-      main: '#1b5e20',
-      dark: '#003300',
-      contrastText: '#ffffff',
+      light: '#ffffff',
+      main: '#e8f5e9',
+      dark: '#b6c2b7',
+      contrastText: '#000000',
     },
     secondary: {
-      light: '#ffffff',
-      main: '#f1f8e9',
-      dark: '#bec5b7',
-      contrastText: '#000000',
+      light: '#39796b',
+      main: '#004d40',
+      dark: '#00251a',
+      contrastText: '#ffffff',
     },
   },
 });
@@ -32,7 +32,10 @@ const theme = createMuiTheme({
 
 
 
+
 function App() {
+  const [entitled, setEntitled] = useState(false)
+ 
   return (
     <BrowserRouter>
     <ThemeProvider theme={theme}>
