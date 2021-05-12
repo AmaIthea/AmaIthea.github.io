@@ -4,11 +4,13 @@ import { BrowserRouter} from 'react-router-dom'
 import {Container} from '@material-ui/core'
 import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
+import Start from './pages/Start/Start'
 import Info from './pages/Info/Info'
 import Practice from './pages/Practice/Practice'
 import Lessons from './pages/Lessons/Lessons'
 import Styles from './app.module.css'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
 
 const theme = createMuiTheme({
   palette: {
@@ -34,7 +36,7 @@ const theme = createMuiTheme({
 
 
 function App() {
-  const [entitled, setEntitled] = useState(false)
+  const [entitled, setEntitled] = useState(false);
  
   return (
     <BrowserRouter>
@@ -45,6 +47,7 @@ function App() {
           <Route path='/info' component={Info}/>
           <Route path='/practice' component={Practice}/>
           <Route path='/lessons' component={Lessons}/>
+          <Route path='/' exact component={Start}/>
       </Container>
     </ThemeProvider>
     </BrowserRouter>
