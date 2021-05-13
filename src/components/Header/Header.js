@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -19,6 +19,8 @@ import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info'
 import WorkIcon from '@material-ui/icons/Work';
 import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
+import Button from '@material-ui/core/Button';
+import SnackBar from './../SnackBar/SnackBar'
 
 
 const drawerWidth = 240;
@@ -88,7 +90,8 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [openSnack, setOpenSnack] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -97,7 +100,10 @@ const Header = () => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
+  const handleClick = () => {
+    setOpenSnack(true);
+  };
+ 
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -107,6 +113,7 @@ const Header = () => {
           [classes.appBarShift]: open,
         })}
       >
+       
         <Toolbar>
           <IconButton
             color="inherit"
@@ -120,8 +127,10 @@ const Header = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            English lessons
+            title
           </Typography>
+          <Button onClick={handleClick} className=''>Login</Button>
+          <SnackBar />
         </Toolbar>
       </AppBar>
       <Drawer

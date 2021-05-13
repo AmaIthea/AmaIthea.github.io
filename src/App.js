@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Route } from 'react-router'
 import { BrowserRouter} from 'react-router-dom'
-import {Container} from '@material-ui/core'
+import {Button, Container} from '@material-ui/core'
 import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
 import Start from './pages/Start/Start'
 import Info from './pages/Info/Info'
 import Practice from './pages/Practice/Practice'
 import Lessons from './pages/Lessons/Lessons'
+import CookieAlert from './components/Cookie/CookieAlert'
 import Styles from './app.module.css'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import {Context} from './context'
 
 
 const theme = createMuiTheme({
@@ -37,9 +39,26 @@ const theme = createMuiTheme({
 
 function App() {
   const [entitled, setEntitled] = useState(false);
- 
+  const [showCookie, setShowCookie] = useState(false);
+  const [showSnackbar, setShowSnackbar] = useState(false);
+
+  const CookieShow = () => {
+    showCookie ? setShowCookie(false) : setShowCookie(true)
+  }
+  const entitledOn = () => {
+    entitled ? setEntitled(false) : setEntitled(true)
+  }
+  const snackbarShow = () => {
+    showSnackbar ? setShowSnackbar(false) : setShowSnackbar(true)
+  }
+  const snackbarState = () => {return showSnackbar}
+  
+
   return (
     <BrowserRouter>
+    <Context.Provider value={{
+       CookieShow, entitledOn, snackbarShow, snackbarState
+    }}>
     <ThemeProvider theme={theme}>
       <Header/>
       <Container className={Styles.container} maxWidth="sm">
@@ -49,7 +68,9 @@ function App() {
           <Route path='/lessons' component={Lessons}/>
           <Route path='/' exact component={Start}/>
       </Container>
+      <CookieAlert/>
     </ThemeProvider>
+    </Context.Provider>
     </BrowserRouter>
   );
 }
