@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { Route } from 'react-router'
 import { BrowserRouter} from 'react-router-dom'
-import {Button, Container} from '@material-ui/core'
+import { Container, Slide} from '@material-ui/core'
 import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
 import Start from './pages/Start/Start'
@@ -11,6 +11,8 @@ import Lessons from './pages/Lessons/Lessons'
 import CookieAlert from './components/Cookie/CookieAlert'
 import Styles from './app.module.css'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+import { SnackbarProvider, useSnackbar } from 'notistack';
 import {Context} from './context'
 
 
@@ -30,11 +32,6 @@ const theme = createMuiTheme({
     },
   },
 });
-
-
-
-
-
 
 
 function App() {
@@ -60,6 +57,11 @@ function App() {
        CookieShow, entitledOn, snackbarShow, snackbarState
     }}>
     <ThemeProvider theme={theme}>
+    <SnackbarProvider
+    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} 
+    maxSnack={3}
+    TransitionComponent={Slide}
+    >
       <Header/>
       <Container className={Styles.container} maxWidth="sm">
           <Route path='/home' component={Home}/>
@@ -68,7 +70,10 @@ function App() {
           <Route path='/lessons' component={Lessons}/>
           <Route path='/' exact component={Start}/>
       </Container>
-      <CookieAlert/>
+      
+        <CookieAlert/>
+      
+    </SnackbarProvider>
     </ThemeProvider>
     </Context.Provider>
     </BrowserRouter>

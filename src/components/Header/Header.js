@@ -20,7 +20,7 @@ import InfoIcon from '@material-ui/icons/Info'
 import WorkIcon from '@material-ui/icons/Work';
 import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
 import Button from '@material-ui/core/Button';
-import Snackbar from './../Snackbar/Snackbar'
+
 
 
 const drawerWidth = 240;
@@ -130,7 +130,6 @@ const Header = () => {
             title
           </Typography>
           <Button onClick={handleClick} className=''>Login</Button>
-          <Snackbar />
         </Toolbar>
       </AppBar>
       <Drawer
