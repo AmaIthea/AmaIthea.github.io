@@ -19,16 +19,16 @@ import {Context} from './context'
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#ffffff',
-      main: '#e8f5e9',
-      dark: '#b6c2b7',
+      light: '#8eacbb',
+      main: '#607d8b',
+      dark: '#34515e',
       contrastText: '#000000',
     },
     secondary: {
-      light: '#39796b',
-      main: '#004d40',
-      dark: '#00251a',
-      contrastText: '#ffffff',
+      light: '#ffffff',
+      main: '#cfd8dc',
+      dark: '#9ea7aa',
+      contrastText: '#000000',
     },
   },
 });
@@ -37,7 +37,6 @@ const theme = createMuiTheme({
 function App() {
   const [entitled, setEntitled] = useState(false);
   const [showCookie, setShowCookie] = useState(false);
-  const [showSnackbar, setShowSnackbar] = useState(false);
 
   const CookieShow = () => {
     showCookie ? setShowCookie(false) : setShowCookie(true)
@@ -45,16 +44,13 @@ function App() {
   const entitledOn = () => {
     entitled ? setEntitled(false) : setEntitled(true)
   }
-  const snackbarShow = () => {
-    showSnackbar ? setShowSnackbar(false) : setShowSnackbar(true)
-  }
-  const snackbarState = () => {return showSnackbar}
+  
   
 
   return (
     <BrowserRouter>
     <Context.Provider value={{
-       CookieShow, entitledOn, snackbarShow, snackbarState
+       CookieShow, entitledOn
     }}>
     <ThemeProvider theme={theme}>
     <SnackbarProvider
@@ -64,14 +60,14 @@ function App() {
     >
       <Header/>
       <Container className={Styles.container} maxWidth="sm">
+          <Route path='/' exact component={Start}/>
           <Route path='/home' component={Home}/>
           <Route path='/info' component={Info}/>
           <Route path='/practice' component={Practice}/>
           <Route path='/lessons' component={Lessons}/>
-          <Route path='/' exact component={Start}/>
+          <CookieAlert/>
       </Container>
-      
-        <CookieAlert/>
+     
       
     </SnackbarProvider>
     </ThemeProvider>
