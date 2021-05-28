@@ -1,15 +1,39 @@
 
 .block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     position: relative;
-    margin: 16px 0 0;
+    margin: 16px 0 16px;
     padding: 16px;
+    width: 100%;
+
 }
-.close {
-  
+
+.input {
+    width: 100%;
 }
 .h2 {
     margin: 6px;
 }
 .p {
     margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.registration {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }

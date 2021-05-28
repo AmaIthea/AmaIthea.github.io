@@ -36,21 +36,16 @@ const theme = createMuiTheme({
 
 function App() {
   const [entitled, setEntitled] = useState(false);
-  const [showCookie, setShowCookie] = useState(false);
 
-  const CookieShow = () => {
-    showCookie ? setShowCookie(false) : setShowCookie(true)
-  }
-  const entitledOn = () => {
+  const entitledSwitch = () => {
     entitled ? setEntitled(false) : setEntitled(true)
   }
-  
-  
+  const entitledCheck = () => entitled
 
   return (
     <BrowserRouter>
     <Context.Provider value={{
-       CookieShow, entitledOn
+        entitledSwitch, entitledCheck
     }}>
     <ThemeProvider theme={theme}>
     <SnackbarProvider
