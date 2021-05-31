@@ -36,6 +36,7 @@ const theme = createMuiTheme({
 
 function App() {
   const [entitled, setEntitled] = useState(false);
+  
 
   const entitledSwitch = () => {
     entitled ? setEntitled(false) : setEntitled(true)
