@@ -19,6 +19,7 @@ import InfoIcon from '@material-ui/icons/Info'
 import WorkIcon from '@material-ui/icons/Work';
 import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
 import Button from '@material-ui/core/Button';
+import Profile from './../Profile/Profile'
 
 
 
@@ -105,9 +106,7 @@ const Header = () => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const handleClick = () => {
-    setOpenSnack(true);
-  };
+ 
  
   return (
     <div className={classes.root}>
@@ -135,7 +134,7 @@ const Header = () => {
           <Button component="a" href='/'>
             title
           </Button>
-          <Button onClick={handleClick} className=''>Login</Button>
+          <Profile />
           </div>
         </Toolbar>
       </AppBar>

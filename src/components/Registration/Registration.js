@@ -37,14 +37,14 @@ const  Registration = () => {
 
 
     const userCreate = () => {
-        console.log(Cookies.get())
-        Cookies.remove()
-        console.log(Cookies.get())
+       
         if (encryptionPassword(userName, userPassword)) {
             let name = 'user' + userName;
             if (Cookies.get(name) !== userName) {
                 if (!entitledCheck()) {
                     entitledSwitch()
+                    Cookies.set(name, userName)
+                    console.log(Cookies.get())
                     enqueueSnackbar('Profile successfully created', {
                         variant: 'success'
                     })

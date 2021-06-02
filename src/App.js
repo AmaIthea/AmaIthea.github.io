@@ -43,6 +43,7 @@ function App() {
   }
   const entitledCheck = () => entitled
 
+
   return (
     <BrowserRouter>
     <Context.Provider value={{
