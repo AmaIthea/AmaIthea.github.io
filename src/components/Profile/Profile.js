@@ -7,7 +7,10 @@ import Authorization from '../Authorization/Authorization';
 
 const Profile = () => {
     const {entitledCheck} = useContext(Context)
+
+
     if(entitledCheck()) {
+        let array =  Cookies.get()
         return (
             <Button>
                 <Avatar>A</Avatar>
@@ -16,9 +19,7 @@ const Profile = () => {
         )
     } else {
         return (
-            <Button >
                 <Authorization/>
-            </Button>
         )
     }
     
