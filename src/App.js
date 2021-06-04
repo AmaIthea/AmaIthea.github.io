@@ -19,19 +19,20 @@ import {Context} from './context'
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#8eacbb',
-      main: '#607d8b',
-      dark: '#34515e',
+      light: '#c1d5e0',
+      main: '#90a4ae',
+      dark: '#62757f',
       contrastText: '#000000',
     },
     secondary: {
-      light: '#ffffff',
-      main: '#cfd8dc',
-      dark: '#9ea7aa',
+      light: '#fbfffc',
+      main: '#c8e6c9',
+      dark: '#97b498',
       contrastText: '#000000',
     },
   },
 });
+
 
 
 function App() {
@@ -53,7 +54,7 @@ function App() {
   return (
     <BrowserRouter>
     <Context.Provider value={{
-        entitledSwitch, entitledCheck
+        entitledSwitch, entitledCheck, nameSwitch, nameCheck
     }}>
     <ThemeProvider theme={theme}>
     <SnackbarProvider

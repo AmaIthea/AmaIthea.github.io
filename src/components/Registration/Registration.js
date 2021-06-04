@@ -7,11 +7,7 @@ import styleComponents from './../../styleComponents.module.css';
 import TextField from '@material-ui/core/TextField';
 import Cookies from 'js-cookie';
 
-const encryptionPassword = (name, password) => {
-    let array = password.split('')
-    console.log(array)
-    return true
-}
+
 
 const  Registration = () => {
     const { enqueueSnackbar } = useSnackbar();
@@ -22,7 +18,16 @@ const  Registration = () => {
     const [errorName, setErrorName] = useState(false)
     const { entitledSwitch, entitledCheck} = useContext(Context);
 
-    
+    const encryptionPassword = (name, password) => {
+        let arr = password.split('')
+        arr.find((i)=>{
+            if(i == ' ') {
+               
+                return false
+            }
+        })
+        return true
+    }
 
     const clearRegistration = () => {
         setCreateDisabled(true)
@@ -59,7 +64,9 @@ const  Registration = () => {
                 })     
             }
         } else {
-            
+            enqueueSnackbar('The password must not contain spaces', {
+                variant: 'error' 
+            })
         }
     }
 
