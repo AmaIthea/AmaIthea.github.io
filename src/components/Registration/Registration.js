@@ -16,14 +16,15 @@ const  Registration = () => {
     const [userPasswordAgain, setUserPasswordAgain] = useState('');
     const [createDisabled, setCreateDisabled] = useState(true);
     const [errorName, setErrorName] = useState(false)
-    const { entitledSwitch, entitledCheck} = useContext(Context);
+    const { entitledSwitch, entitledCheck, nameSwitch, nameCheck} = useContext(Context);
 
     const encryptionPassword = (name, password) => {
         let arr = password.split('')
         arr.find((i)=>{
             if(i == ' ') {
-               
                 return false
+            } else {
+
             }
         })
         return true
@@ -42,14 +43,20 @@ const  Registration = () => {
 
 
     const userCreate = () => {
-       
+        console.log(nameSwitch(userName))
         if (encryptionPassword(userName, userPassword)) {
             let name = 'user' + userName;
-            if (Cookies.get(name) !== userName) {
+            if (localStorage.getItem(name) !== userName) {
                 if (!entitledCheck()) {
                     entitledSwitch()
-                    Cookies.set(name, userName)
-                    console.log(Cookies.get())
+                    localStorage.setItem(name, userName)
+                    nameSwitch('212')
+                    console.log(nameSwitch())
+                    console.log(nameCheck())
+                    // for(let i=0; i<localStorage.length; i++) {
+                    //     let key = localStorage.key(i);
+                    //     alert(`${key}: ${localStorage.getItem(key)}`);
+                    // }
                     enqueueSnackbar('Profile successfully created', {
                         variant: 'success'
                     })
@@ -89,7 +96,7 @@ const  Registration = () => {
                  onFocus={(e)=>{setErrorName(false)}}
                  onBlur={(e)=>{
                     let name = 'user' + userName;
-                    if (Cookies.get(name) == userName) {
+                    if (localStorage.getItem(name) == userName) {
                         setErrorName(true)
                         setCreateDisabled(true)
                         enqueueSnackbar('This name is taken', {

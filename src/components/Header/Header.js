@@ -96,7 +96,6 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const [openSnack, setOpenSnack] = useState(false);
   const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
