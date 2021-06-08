@@ -42,9 +42,14 @@
     right: 50%;
     transform: translate(50%, -50%);
 }
-
 .registration {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.avatar {
+    margin-right: 14px;
+}
+.name {
+    text-transform: none !important;
 }
