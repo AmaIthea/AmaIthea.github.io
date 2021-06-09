@@ -9,7 +9,15 @@ import Authorization from '../Authorization/Authorization';
 import styleComponents from './../../styleComponents.module.css';
 
 const Profile = () => {
-    const {entitledCheck, nameCheck} = useContext(Context);
+    const { nameSwitch,
+            avatarSwitch,
+            expSwitch,
+            entitledSwitch,
+    
+            nameCheck,
+            avatarCheck,
+            expCheck,
+            entitledCheck} = useContext(Context);
 
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -22,17 +30,13 @@ const Profile = () => {
         
     };
 
-    const randomImage = () => {
-        let rand = Math.round(1 - 0.5 + Math.random() * (3 - 1 + 1)) + 40
-        return 'https://place-puppy.com/' + rand + 'x' + rand
-        
-    }
+   
 
     if(entitledCheck()) {
         return (
             <div>
             <Button className={styleComponents.name} onClick={handleClick}>
-                <Avatar className={styleComponents.avatar}><img src={randomImage()}/></Avatar>
+                <Avatar className={styleComponents.avatar}><img src={avatarCheck()}/></Avatar>
                 {nameCheck()}
             </Button>
             <Menu

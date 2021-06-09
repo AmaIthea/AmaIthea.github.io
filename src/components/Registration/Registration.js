@@ -5,9 +5,6 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import styleComponents from './../../styleComponents.module.css';
 import TextField from '@material-ui/core/TextField';
-import Cookies from 'js-cookie';
-
-
 
 const  Registration = () => {
     
@@ -20,14 +17,25 @@ const  Registration = () => {
     const [createDisabled, setCreateDisabled] = useState(true);
     const [errorName, setErrorName] = useState(false)
 
-    const { entitledSwitch, entitledCheck, nameSwitch, nameCheck} = useContext(Context);
+    const { nameSwitch,
+            avatarSwitch,
+            expSwitch,
+            entitledSwitch,
+    
+            entitledCheck} = useContext(Context);
+    
+    const encryptionPassword = pass => {
+        let password = 'password' + userName
+        let arr = pass.split('')
+        arr.reverse()
+        localStorage.setItem(password, arr.join(''))
+    }  
 
-    const encryptionPassword = (name, password) => {
-        if (password == '')  {return false}
-        let arr = password.split('')
-        for (let i = 0; i < arr.length; i++){
-            if (arr[i] == ' '){return false}
-        }
+    const validationPassword = pass => {
+        if (pass == '')  {return false}
+        let arr = pass.split('')
+        for (let i = 0; i < arr.length; i++){if (arr[i] == ' '){return false}}
+        encryptionPassword(pass) 
         return true
     }
 
@@ -42,14 +50,11 @@ const  Registration = () => {
     const passwordChange = (event) => setUserPassword(event.target.value) 
     const passwordAgainChange = (event) => setUserPasswordAgain(event.target.value)
 
-    localStorage.clear()
-    // for(let i=0; i<localStorage.length; i++) {
-    //     let key = localStorage.key(i);
-    //     console.log(`${key}: ${localStorage.getItem(key)}`);
-    // }
+  
+    
     
     const userCheck = () => {
-        if (encryptionPassword(userName, userPassword)) {
+        if (validationPassword(userPassword)) {
             let name = 'user' + userName;
 
             if (localStorage.getItem(name) !== userName) {
@@ -75,12 +80,26 @@ const  Registration = () => {
             })
         }
     }
+    const randomImage = () => {
+        let rand = Math.round(1 - 0.5 + Math.random() * (3 - 1 + 1)) + 40
+        return 'https://place-puppy.com/' + rand + 'x' + rand
+        
+    }
     const userCreate = () => {
         let name = 'user' + userName;
+        let avatar = 'avatar' + userName;
+        let exp = 'exp' + userName;
         localStorage.setItem(name, userName)
+        localStorage.setItem(avatar, randomImage())
+        localStorage.setItem(exp, 0)
         nameSwitch(userName)
-    }
+        avatarSwitch(localStorage.getItem(avatar))
+        expSwitch(0)
 
+       
+    }
+    
+    
 
     if (!entitledCheck()) {
         return (
@@ -106,8 +125,6 @@ const  Registration = () => {
                         enqueueSnackbar('This name is taken', {
                             variant: 'error' 
                         })
-                    } else {
-                        setCreateDisabled(false)
                     }
                 }}/>
                 <TextField className={styleComponents.input} id="filled-basic" onChange={passwordChange} value={userPassword} label="password" variant="filled" type="password"/>

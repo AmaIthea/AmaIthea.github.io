@@ -37,25 +37,38 @@ const theme = createMuiTheme({
 
 function App() {
   const [entitled, setEntitled] = useState(false);
+  
   const [userName, setUserName] = useState('');
-  const nameSwitch = name => {
-    return setUserName(name)
-  }
+  const [userAvatar, setUserAvatar] = useState('');
+  const [userExp, setUserExp] = useState(0);
+  
+  const entitledSwitch = () => entitled ? setEntitled(false) : setEntitled(true)
+  const nameSwitch = name => setUserName(name)
+  const avatarSwitch = link => setUserAvatar(link)
+  const expSwitch = exp => setUserExp(exp) 
   
   const nameCheck = () => userName
+  const avatarCheck = () => userAvatar
+  const expCheck = () => userExp
+  const entitledCheck = () => entitled
 
   
+  
 
-  const entitledSwitch = () => {
-    entitled ? setEntitled(false) : setEntitled(true)
-  }
-  const entitledCheck = () => entitled
 
 
   return (
     <BrowserRouter>
     <Context.Provider value={{
-        entitledSwitch, entitledCheck, nameSwitch, nameCheck
+    nameSwitch,
+    avatarSwitch,
+    expSwitch,
+    entitledSwitch,
+
+    nameCheck,
+    avatarCheck,
+    expCheck,
+    entitledCheck
     }}>
     <ThemeProvider theme={theme}>
     <SnackbarProvider
