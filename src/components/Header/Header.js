@@ -20,7 +20,8 @@ import WorkIcon from '@material-ui/icons/Work';
 import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
 import Button from '@material-ui/core/Button';
 import Profile from './../Profile/Profile'
-
+import { NavLink } from 'react-router-dom';
+import styleComponents from './../../styleComponents.module.css';
 
 
 const drawerWidth = 240;
@@ -105,7 +106,7 @@ const Header = () => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
- 
+  const preventDefault = (event) => event.preventDefault();
  
   return (
     <div className={classes.root}>
@@ -130,6 +131,7 @@ const Header = () => {
             <MenuIcon />
           </IconButton>
           <div className={classes.header}>
+            
           <Button component="a" href='/'>
             title
           </Button>
@@ -157,22 +159,30 @@ const Header = () => {
         </div>
         <Divider />
         <List>
-            <ListItem button component="a" href='/home'>  
-              <ListItemIcon><HomeIcon /></ListItemIcon>
-              <ListItemText primary='home'/>
-            </ListItem>
-            <ListItem button component="a" href='/info'>  
+            <NavLink className={styleComponents.link} to='/home'>
+              <ListItem button component="a">  
+                <ListItemIcon><HomeIcon /></ListItemIcon>
+                <ListItemText primary='home'/>
+              </ListItem>
+            </NavLink>
+            <NavLink className={styleComponents.link} to='/info'>
+            <ListItem button component="a">  
               <ListItemIcon><InfoIcon /></ListItemIcon>
               <ListItemText primary='info'/>
             </ListItem>
-            <ListItem button component="a" href='/practice'>  
+            </NavLink>
+            <NavLink className={styleComponents.link} to='/practice'>
+            <ListItem button component="a">  
               <ListItemIcon><WorkIcon /></ListItemIcon>
               <ListItemText primary='practice'/>
             </ListItem>
-            <ListItem button component="a" href='/lessons'>  
+            </NavLink>
+            <NavLink className={styleComponents.link} to='/lessons'>
+            <ListItem button component="a">  
               <ListItemIcon><ViewCarouselIcon /></ListItemIcon>
               <ListItemText primary='lessons'/>
             </ListItem>
+            </NavLink>
         </List>
         <Divider />
         

@@ -95,8 +95,6 @@ const  Registration = () => {
         nameSwitch(userName)
         avatarSwitch(localStorage.getItem(avatar))
         expSwitch(0)
-
-       
     }
     
     
