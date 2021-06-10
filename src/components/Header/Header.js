@@ -131,10 +131,11 @@ const Header = () => {
             <MenuIcon />
           </IconButton>
           <div className={classes.header}>
-            
-          <Button component="a" href='/'>
-            title
-          </Button>
+          <NavLink className={styleComponents.link} to='/lessons'>
+            <Button>
+              title
+            </Button>
+          </NavLink>  
           <Profile />
           </div>
         </Toolbar>

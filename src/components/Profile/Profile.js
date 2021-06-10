@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import Cookies from 'js-cookie'
+import React, {useContext} from 'react'
+import { NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -46,9 +46,9 @@ const Profile = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem component="a" href="/lessons" onClick={handleClose}>Profile</MenuItem>
-                <MenuItem component="a" href="/lessons" onClick={handleClose}>My account</MenuItem>
-                <MenuItem component="a" href="/lessons" onClick={handleClose}>Logout</MenuItem>
+                <NavLink className={styleComponents.link} to='/MyProfile'><MenuItem onClick={handleClose}>Profile</MenuItem></NavLink>
+                <NavLink className={styleComponents.link} to='/'><MenuItem onClick={handleClose}>My account</MenuItem></NavLink>
+                <NavLink className={styleComponents.link} to='/'><MenuItem onClick={handleClose}>Logout</MenuItem></NavLink>
       </Menu>
             </div>
         )

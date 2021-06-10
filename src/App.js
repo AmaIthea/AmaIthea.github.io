@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Route } from 'react-router'
 import { BrowserRouter} from 'react-router-dom'
 import { Container, Slide} from '@material-ui/core'
@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
 import Start from './pages/Start/Start'
 import Info from './pages/Info/Info'
+import MyProfile from './pages/MyProfile/MyProfile'
 import Practice from './pages/Practice/Practice'
 import Lessons from './pages/Lessons/Lessons'
 import CookieAlert from './components/Cookie/CookieAlert'
@@ -77,12 +78,13 @@ function App() {
     TransitionComponent={Slide}
     >
       <Header/>
-      <Container className={Styles.container} maxWidth="sm">
+      <Container className={Styles.container} maxWidth="lg">
           <Route path='/' exact component={Start}/>
           <Route path='/home' component={Home}/>
           <Route path='/info' component={Info}/>
           <Route path='/practice' component={Practice}/>
           <Route path='/lessons' component={Lessons}/>
+          <Route path='/myProfile' component={MyProfile}/>
           <CookieAlert/>
       </Container>
      
