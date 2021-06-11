@@ -82,8 +82,6 @@ const Authorization = () => {
           <Button onClick={handleOpen}>
             log in
           </Button>
-
-
               <Modal
                 open={open}
                 onClose={handleClose}

@@ -21,7 +21,6 @@ const  Registration = () => {
             avatarSwitch,
             expSwitch,
             entitledSwitch,
-    
             entitledCheck} = useContext(Context);
     
     const encryptionPassword = pass => {
@@ -40,6 +39,7 @@ const  Registration = () => {
     }
 
     const clearRegistration = () => {
+        localStorage.clear()
         setCreateDisabled(true)
         setErrorName(false)
         setUserName('')
@@ -81,7 +81,7 @@ const  Registration = () => {
         }
     }
     const randomImage = () => {
-        let rand = Math.round(1 - 0.5 + Math.random() * (3 - 1 + 1)) + 40
+        let rand = Math.round(1 - 0.5 + Math.random() * (3 - 1 + 1)) + 180
         return 'https://place-puppy.com/' + rand + 'x' + rand
         
     }

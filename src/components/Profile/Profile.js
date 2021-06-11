@@ -49,7 +49,7 @@ const Profile = () => {
                 <NavLink className={styleComponents.link} to='/MyProfile'><MenuItem onClick={handleClose}>Profile</MenuItem></NavLink>
                 <NavLink className={styleComponents.link} to='/'><MenuItem onClick={handleClose}>My account</MenuItem></NavLink>
                 <NavLink className={styleComponents.link} to='/'><MenuItem onClick={handleClose}>Logout</MenuItem></NavLink>
-      </Menu>
+            </Menu>
             </div>
         )
     } else {

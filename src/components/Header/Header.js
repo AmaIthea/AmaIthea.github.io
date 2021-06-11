@@ -131,7 +131,7 @@ const Header = () => {
             <MenuIcon />
           </IconButton>
           <div className={classes.header}>
-          <NavLink className={styleComponents.link} to='/lessons'>
+          <NavLink className={styleComponents.link} to='/'>
             <Button>
               title
             </Button>
