@@ -41,7 +41,14 @@ const MyProfile = () => {
     const linkChange = (event) => setUserAvatar(event.target.value);
     const clearEdit = () => setUserAvatar('')
     const editAvatar = () => {
+        if(userAvatar !== ' '){
+          avatarSwitch(userAvatar)
+          handleClose()
+          let linkAvatar = 'avatar' + nameCheck()
+          localStorage.setItem(linkAvatar, userAvatar)
+        } else {
 
+        }
     }
 
 
@@ -64,6 +71,13 @@ const MyProfile = () => {
                 </Paper> 
               </Modal>
             </div>
+            <div className={styleComponents.title}>
+              <h2 className={styleComponents.h2}>{nameCheck()}</h2>
+              <IconButton>
+                <EditIcon />
+              </IconButton>
+            </div>
+            
 
             <Paper className={styleComponents.Paper}>
                 
