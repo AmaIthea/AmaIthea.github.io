@@ -69,6 +69,7 @@ const MyProfile = () => {
     const editName = () => {
         let name = 'user' + userName;
         if(localStorage.getItem(name) !== userName){
+          rewritingName()
           enqueueSnackbar('Name change was successful', {
             variant: 'success' 
           }) 
@@ -84,17 +85,24 @@ const MyProfile = () => {
     const rewritingName = (name) => {
       let newName = 'user' + userName;
       let oldName = 'user' + nameCheck();
+      
       let newPassword = 'password' + userName;
       let oldPassword = 'password' + nameCheck();
+      
       let newAvatar = 'avatar' + userName;
       let oldAvatar = 'avatar' + nameCheck();
       let newExp = 'exp' + userName;
       let oldExp = 'exp' + nameCheck();
-      
-      localStorage.removeItem(oldName)
-      LocalStorage.removeItem(oldPassword)
-      LocalStorage.removeItem(oldAvatar)
-      LocalStorage.removeItem(oldExp)
+      for(let i=0; i<localStorage.length; i++) {
+        let key = localStorage.key(i);
+       console.log(`${key}: ${localStorage.getItem(key)}`);
+      }
+      window.localStorage.removeItem(oldName)
+      window.LocalStorage.setItem(newName, newName)
+      window.LocalStorage.removeItem(oldPassword)
+      window.LocalStorage.removeItem(oldAvatar)
+      window.LocalStorage.removeItem(oldExp)
+   
     } 
     return (
         <div className={styleComponents.MyProfile}>
