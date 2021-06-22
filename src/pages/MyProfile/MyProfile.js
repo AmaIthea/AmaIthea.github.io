@@ -93,10 +93,10 @@ const MyProfile = () => {
       let oldAvatar = 'avatar' + nameCheck();
       let newExp = 'exp' + userName;
       let oldExp = 'exp' + nameCheck();
-      for(let i=0; i<localStorage.length; i++) {
-        let key = localStorage.key(i);
-       console.log(`${key}: ${localStorage.getItem(key)}`);
-      }
+      // for(let i=0; i<localStorage.length; i++) {
+      //   let key = localStorage.key(i);
+      //  console.log(`${key}: ${localStorage.getItem(key)}`);
+      // }
       window.localStorage.removeItem(oldName)
       window.LocalStorage.setItem(newName, newName)
       window.LocalStorage.removeItem(oldPassword)
