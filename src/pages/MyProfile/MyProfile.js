@@ -50,6 +50,7 @@ const MyProfile = () => {
 
     const clearEditAvatar = () => setUserAvatar('')
     const clearEditName = () => setUserName('')
+    
 
     const editAvatar = () => {
         if(userAvatar !== ' ' && userAvatar !== ''){
