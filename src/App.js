@@ -16,6 +16,10 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { SnackbarProvider, useSnackbar } from 'notistack';
 import {Context} from './context'
 
+import firebase from 'firebase'
+import 'firebase/firestore'
+import 'firebase/auth'
+
 
 const theme = createMuiTheme({
   palette: {
@@ -54,13 +58,18 @@ function App() {
   const entitledCheck = () => entitled
 
   
+  const auth = firebase.auth()
+  const firestore = firebase.firestore()
   
-
 
 
   return (
     <BrowserRouter>
     <Context.Provider value={{
+    firestore,
+    firebase,
+    auth,
+
     nameSwitch,
     avatarSwitch,
     expSwitch,

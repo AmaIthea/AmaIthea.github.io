@@ -102,10 +102,10 @@ const  Registration = () => {
     if (!entitledCheck()) {
         return (
         <div className={styleComponents.registration}>
-            {/* <Paper elevation={1}  className={styleComponents.block}>
+            <Paper elevation={1}  className={styleComponents.block}>
                <h2 className={styleComponents.h2}>Предлагаем Вам зарегестрироваться!</h2>
                <p className={styleComponents.p}>Авторизация упрастит Вам работу с нашем сайтом, данные хронятся на стороне клиента в зашефрованном виде.</p>
-            </Paper> */}
+            </Paper>
             <Paper elevation={1}  className={styleComponents.block}>
                 <TextField className={styleComponents.input} 
                  id="filled-basic" 

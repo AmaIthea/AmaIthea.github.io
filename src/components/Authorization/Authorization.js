@@ -17,7 +17,12 @@ const Authorization = () => {
     const nameChange = (event) => setUserName(event.target.value);
     const passwordChange = (event) => setUserPassword(event.target.value);
 
-    const { nameSwitch,
+    const { 
+            firestore,
+            firebase,
+            auth,
+      
+            nameSwitch,
             avatarSwitch,
             expSwitch,
             entitledSwitch,
@@ -77,6 +82,12 @@ const Authorization = () => {
       //   console.log(`${key}: ${localStorage.getItem(key)}`);
       // }
     }
+
+    const loginGoogle =  async () => {
+      const provider = new firebase.auth.GoogleAuthProvider()
+      const {user} = await auth.signInWithPopup(provider)
+      console.log(user)
+  }
     return (
       <div>
           <Button onClick={handleOpen}>
