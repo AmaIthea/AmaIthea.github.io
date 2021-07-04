@@ -31,9 +31,9 @@ const  Registration = () => {
     }  
 
     const validationPassword = pass => {
-        if (pass == '')  {return false}
+        if (pass === '')  {return false}
         let arr = pass.split('')
-        for (let i = 0; i < arr.length; i++){if (arr[i] == ' '){return false}}
+        for (let i = 0; i < arr.length; i++){if (arr[i] === ' '){return false}}
         encryptionPassword(pass) 
         return true
     }
@@ -117,7 +117,7 @@ const  Registration = () => {
                  onFocus={(e)=>{setErrorName(false)}}
                  onBlur={(e)=>{
                     let name = 'user' + userName;
-                    if (localStorage.getItem(name) == userName) {
+                    if (localStorage.getItem(name) === userName) {
                         setErrorName(true)
                         setCreateDisabled(true)
                         enqueueSnackbar('This name is taken', {
