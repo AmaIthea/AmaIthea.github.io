@@ -80,17 +80,13 @@ const  Registration = () => {
             })
         }
     }
-    const randomImage = () => {
-        let rand = Math.round(1 - 0.5 + Math.random() * (3 - 1 + 1)) + 180
-        return 'https://place-puppy.com/' + rand + 'x' + rand
-        
-    }
+    
     const userCreate = () => {
         let name = 'user' + userName;
         let avatar = 'avatar' + userName;
         let exp = 'exp' + userName;
         localStorage.setItem(name, userName)
-        localStorage.setItem(avatar, randomImage())
+        
         localStorage.setItem(exp, 0)
         nameSwitch(userName)
         avatarSwitch(localStorage.getItem(avatar))

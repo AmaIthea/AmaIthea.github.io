@@ -2,8 +2,8 @@ import React, {useContext} from 'react';
 import {Context} from './../../context';
 import { Route, Switch, Redirect } from 'react-router-dom'
 
-import {MY_PROFILE_ROUTE} from './../../utils/consts/routerConsts'
-import {START_ROUTE} from './../../utils/consts/routerConsts'
+import {MY_PROFILE_ROUTE} from '../../utils/consts/router'
+import {START_ROUTE} from '../../utils/consts/router'
 
 
 import { privateRoutes , publicRoutes }  from './../../utils/routes/routes'

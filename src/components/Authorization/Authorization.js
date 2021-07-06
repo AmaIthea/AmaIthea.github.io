@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {Context} from './../../context';
 import { useSnackbar } from 'notistack';
-import Modal from '@material-ui/core/Modal';
+
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
@@ -10,7 +10,7 @@ import styleComponents from './../../styleComponents.module.css';
 const Authorization = () => {
     const { enqueueSnackbar } = useSnackbar();
 
-    const [open, setOpen] = useState(false);
+ 
     const [userName, setUserName] = useState('');
     const [userPassword, setUserPassword] = useState('');
 
@@ -38,7 +38,7 @@ const Authorization = () => {
   }
 
   
-    const handleOpen = () => setOpen(true)
+
     const handleClose = () => setOpen(false)
 
     const decryptionPassword = pass => {
@@ -89,23 +89,13 @@ const Authorization = () => {
       console.log(user)
   }
     return (
-      <div>
-          <Button onClick={handleOpen}>
-            log in
-          </Button>
-              <Modal
-                open={open}
-                onClose={handleClose}
-              >
-                <Paper className={styleComponents.modal}>
-                    <h2 id="simple-modal-title">Авторизация</h2>
-                    <TextField className={styleComponents.input} onChange={nameChange} value={userName} label="login" variant="filled"/>
-                    <TextField className={styleComponents.input} onChange={passwordChange} value={userPassword} label="password" variant="filled" type="password"/>
-                    <Button onClick={clearAuthorization}>clear</Button>
-                    <Button onClick={login}>entry</Button>
-                </Paper> 
-              </Modal>
-      </div>
+      <Paper className={styleComponents.modal}>
+        <h2 id="simple-modal-title">Авторизация</h2>
+        <TextField className={styleComponents.input} onChange={nameChange} value={userName} label="login" variant="filled"/>
+        <TextField className={styleComponents.input} onChange={passwordChange} value={userPassword} label="password" variant="filled" type="password"/>
+        <Button onClick={clearAuthorization}>clear</Button>
+        <Button onClick={login}>entry</Button>
+      </Paper> 
     )
 }
 

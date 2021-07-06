@@ -1,4 +1,4 @@
-import {START_ROUTE, MY_PROFILE_ROUTE, PRACTICE_ROUTE, INFO_ROUTE, LESSONS_ROUTE} from './../consts/routerConsts'
+import {START_ROUTE, MY_PROFILE_ROUTE, PRACTICE_ROUTE, INFO_ROUTE, LESSONS_ROUTE} from '../consts/router'
 
 
 

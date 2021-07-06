@@ -3,6 +3,8 @@ import Registration from './../../components/Registration/Registration';
 import styleComponents from './../../styleComponents.module.css'
 import Link from '@material-ui/core/Link';
 
+import User from './../../utils/func_and_class/user'
+
 const Start = () => {
     
 
@@ -16,6 +18,7 @@ const Start = () => {
                   Здесь Вы имеете возможность <Link component="a" href="/lessons">выучить новые слова</Link>, <Link component="a" href="/lessons">практиковать уже пройденное,</Link> а также <Link component="a" href="/lessons">просматривать статистику своей успеваемости</Link>.</p>
                
                 <Registration/>
+
                 
         </div>
     )

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
@@ -7,6 +7,7 @@ import Avatar from '@material-ui/core/Avatar';
 import {Context} from './../../context'
 import Authorization from '../Authorization/Authorization';
 import styleComponents from './../../styleComponents.module.css';
+import Modal from '@material-ui/core/Modal';
 
 const Profile = () => {
     const { nameSwitch,
@@ -19,7 +20,7 @@ const Profile = () => {
             expCheck,
             entitledCheck} = useContext(Context);
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = useState(null);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -29,7 +30,8 @@ const Profile = () => {
         setAnchorEl(null);
         
     };
-
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true)
    
 
     if(entitledCheck()) {
@@ -54,7 +56,17 @@ const Profile = () => {
         )
     } else {
         return (
-                <Authorization/>
+            <div>
+                <Button onClick={handleOpen}>
+                log in
+                </Button>
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                >
+                  <Authorization/>
+                </Modal>
+            </div>
         )
     }
     
