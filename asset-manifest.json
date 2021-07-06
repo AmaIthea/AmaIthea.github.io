@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/AmaIthea.github.io/static/css/main.767af418.chunk.css",
+    "main.js": "/AmaIthea.github.io/static/js/main.bac38be8.chunk.js",
+    "main.js.map": "/AmaIthea.github.io/static/js/main.bac38be8.chunk.js.map",
+    "runtime-main.js": "/AmaIthea.github.io/static/js/runtime-main.8c03ebbd.js",
+    "runtime-main.js.map": "/AmaIthea.github.io/static/js/runtime-main.8c03ebbd.js.map",
+    "static/js/2.94249ec0.chunk.js": "/AmaIthea.github.io/static/js/2.94249ec0.chunk.js",
+    "static/js/2.94249ec0.chunk.js.map": "/AmaIthea.github.io/static/js/2.94249ec0.chunk.js.map",
+    "static/js/3.25d88084.chunk.js": "/AmaIthea.github.io/static/js/3.25d88084.chunk.js",
+    "static/js/3.25d88084.chunk.js.map": "/AmaIthea.github.io/static/js/3.25d88084.chunk.js.map",
+    "index.html": "/AmaIthea.github.io/index.html",
+    "static/css/main.767af418.chunk.css.map": "/AmaIthea.github.io/static/css/main.767af418.chunk.css.map",
+    "static/js/2.94249ec0.chunk.js.LICENSE.txt": "/AmaIthea.github.io/static/js/2.94249ec0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c03ebbd.js",
+    "static/js/2.94249ec0.chunk.js",
+    "static/css/main.767af418.chunk.css",
+    "static/js/main.bac38be8.chunk.js"
+  ]
+}
