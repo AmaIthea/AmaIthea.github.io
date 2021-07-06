@@ -13,7 +13,7 @@ const Start = () => {
         <div className={styleComponents.main}>
                 <h1 className={styleComponents.h1}>Добро пожаловать!</h1>
                 <p className={styleComponents.p}>Мы рады приветствовать вас на обучающем портале English lessons.<br />
-                  Здесь Вы имеете возможность <Link component="a" href="/lessons">выучить новые слова</Link>, <Link component="a" href="/lessons">практиковать уже пройденное</Link> а также <Link component="a" href="/lessons">просматривать статистику  своей успеваемости</Link>.</p>
+                  Здесь Вы имеете возможность <Link component="a" href="/lessons">выучить новые слова</Link>, <Link component="a" href="/lessons">практиковать уже пройденное,</Link> а также <Link component="a" href="/lessons">просматривать статистику своей успеваемости</Link>.</p>
                
                 <Registration/>
                 
