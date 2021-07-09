@@ -2,11 +2,11 @@ import React, {useContext} from 'react';
 import {Context} from './../../context';
 import { Route, Switch, Redirect } from 'react-router-dom'
 
-import {MY_PROFILE_ROUTE} from '../../utils/consts/router'
-import {START_ROUTE} from '../../utils/consts/router'
+import {MY_PROFILE_ROUTE} from '../../utils/router'
+import {START_ROUTE} from '../../utils/router'
 
 
-import { privateRoutes , publicRoutes }  from './../../utils/routes/routes'
+import { privateRoutes , publicRoutes }  from './../../utils/routes'
 
 
 
@@ -22,7 +22,6 @@ const Router = () =>{
             {privateRoutes.map(({path, Component}) =>
             <Route path={path} component={Component} exact={true}/>
             )}
-            
             <Redirect to={MY_PROFILE_ROUTE}/>
         </Switch>    
     ) 
@@ -32,7 +31,6 @@ const Router = () =>{
             {publicRoutes.map(({path, Component}) =>
             <Route path={path} component={Component} exact={true}/>
             )}
-
             <Redirect to={START_ROUTE}/>
         </Switch>
     )

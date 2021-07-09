@@ -1,4 +1,4 @@
-import {START_ROUTE, MY_PROFILE_ROUTE, PRACTICE_ROUTE, INFO_ROUTE, LESSONS_ROUTE} from '../consts/router'
+import {START_ROUTE, MY_PROFILE_ROUTE, PRACTICE_ROUTE, INFO_ROUTE, LESSONS_ROUTE} from './router'
 
 
 
@@ -6,11 +6,11 @@ import {START_ROUTE, MY_PROFILE_ROUTE, PRACTICE_ROUTE, INFO_ROUTE, LESSONS_ROUTE
 
 
 
-import Start from './../../pages/Start/Start'
-import MyProfile from './../../pages/MyProfile/MyProfile'
-import Practice from './../../pages/Practice/Practice'
-import Info from './../../pages/Info/Info'
-import Lessons from './../../pages/Lessons/Lessons'
+import Start from '../pages/Start/Start'
+import MyProfile from '../pages/MyProfile/MyProfile'
+import Practice from '../pages/Practice/Practice'
+import Info from '../pages/Info/Info'
+import Lessons from '../pages/Lessons/Lessons'
 
 
 

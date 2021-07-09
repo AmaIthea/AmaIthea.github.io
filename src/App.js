@@ -8,7 +8,7 @@ import Header from './components/Header/Header'
 import CookieAlert from './components/Cookie/CookieAlert'
 import Styles from './app.module.css'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { SnackbarProvider, useSnackbar } from 'notistack';
+import { SnackbarProvider } from 'notistack';
 import {Context} from './context'
 import Router from './components/Router/Router'
 

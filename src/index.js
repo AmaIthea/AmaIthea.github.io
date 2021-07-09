@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import firebase from 'firebase'
 
+
+// https://engin-bb48c.firebaseapp.com/__/auth/handler facebook
+// https://engin-bb48c.firebaseapp.com/__/auth/handler github
 firebase.initializeApp({
   apiKey: "AIzaSyDKa-6l-S4dyaUk-YOrFszeg0Y_IrMmztY",
   authDomain: "engin-bb48c.firebaseapp.com",
@@ -14,6 +17,8 @@ firebase.initializeApp({
   appId: "1:1006185420975:web:cd0623a6bdc9a980651c5a",
   measurementId: "G-3J2GXEVK3S"
 });
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
