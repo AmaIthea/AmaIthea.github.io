@@ -1,4 +1,6 @@
-export class User {
+import firebase from 'firebase'
+
+export default class User {
     constructor(name, password, avatar = this.randomeAvatar(), exp = 0){
         this.name = name
         this.password = password 
@@ -9,25 +11,23 @@ export class User {
     newName(name = this.name) { this.name = name } 
     newPassword(password = this.password) { this.password = password } 
     newAvatar(avatar = this.avatar) { this.avatar = avatar } 
-    newExp(exp = this.avatar) { this.exp = exp }
-
-   
-
+    newExp(exp = this.exp) { this.exp = exp }
 
     randomeAvatar() {
         let rand = Math.round(1 - 0.5 + Math.random() * (3 - 1 + 1)) + 180
-        return 'https://place-puppy.com/' + rand + 'x' + rand
+        this.avatar = 'https://place-puppy.com/' + rand + 'x' + rand
     }
 
-
-
-
-
-
-    inited() {
-        return console.log(this.name, this.password, this.avatar, this.exp)
+    sendFirebase() {
+        firebase.collection('users').add({
+           userName: this.name,
+           userPassword: this.password,
+           userAvatar: this.avatar,
+           userExp: this.exp
+        })
+        console.log("отправлено и получено",
+        firebase.collection('users')
+        )
     }
 }
 
-const admin = new User('Artem', '13231')
-console.log(admin.inited())

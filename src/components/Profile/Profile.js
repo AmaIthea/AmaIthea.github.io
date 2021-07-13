@@ -21,6 +21,7 @@ const Profile = () => {
             entitledCheck} = useContext(Context);
 
     const [anchorEl, setAnchorEl] = useState(null);
+    const [open, setOpen] = useState(false);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -30,7 +31,7 @@ const Profile = () => {
         setAnchorEl(null);
         
     };
-    const [open, setOpen] = useState(false);
+   
     const handleOpen = () => setOpen(true)
    
 
